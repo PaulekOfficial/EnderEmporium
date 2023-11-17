@@ -145,6 +145,10 @@ a {
   box-shadow: 1px 1px 20px -3px rgba(150, 150, 150, 1);
 }
 
+.maximize-items {
+  width: 100%;
+}
+
 .elements {
   justify-content: center;
   margin: auto;
@@ -316,7 +320,7 @@ a {
 .sidebar-item {
   border-radius: 20px;
   float: left;
-  width: 25%;
+  width: 25.3%;
   min-height: 100px;
   background-color: #FFF8F0;
 
@@ -466,13 +470,13 @@ a {
 
 @media only screen and (max-width: 450px) {
   .item {
-    width: 245px;
+    width: 225px;
     height: 340px;
   }
 
   .item img {
-    height: 185px;
-    width: 220px;
+    height: 165px;
+    width: 200px;
   }
 
   .item-price {
@@ -497,17 +501,17 @@ a {
     width: fit-content;
     font-size: 15px;
     font-weight: bolder;
-    margin: 2px 0 0 12px;
+    margin: 2px 0 0 0;
   }
 
   .item-buy {
     float: left;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 15px;
     margin-right: 15px;
     border-radius: 20px;
     padding: 4px;
-    width: 200px;
+    width: 180px;
     background-color: #111D4A;
     color: #ffffff;
   }

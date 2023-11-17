@@ -1,6 +1,7 @@
 import ServerStatus from "../serverStatus";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCogs, faSignIn, faBars} from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -9,26 +10,26 @@ const NavBar = () => {
                 <FontAwesomeIcon icon={faBars} size={"lg"} />
             </div>
             <ul className="nav-elements">
-                <a href="\">
+                <Link to="/">
                     <li className="active-nav-element">
                         Strona Główna
                     </li>
-                </a>
-                <a href="\">
+                </Link>
+                <Link to="/">
                     <li>
                         Wiadomości
                     </li>
-                </a>
-                <a href="\">
+                </Link>
+                <Link to="/voutcher">
                     <li>
                         Zrealizuj Voucher
                     </li>
-                </a>
-                <a href="\">
+                </Link>
+                <Link to="/">
                     <li>
                         Regulamin
                     </li>
-                </a>
+                </Link>
             </ul>
 
             <div className="nav-icons">
