@@ -13,6 +13,25 @@ const NavBar = () => {
     const sliderRef = useRef(null);
     const indexValueRef = useRef(indexValue);
 
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+    })
+
+    const handleScroll = () => {
+        const nav = $('.nav');
+        const offset= window.scrollY;
+        if(offset > 120 ){
+            if (!nav.hasClass('stickyNav')) {
+                nav.addClass('stickyNav');
+                nav.css({ opacity: 0, top: '-50px' });
+                nav.animate({ opacity: 1, top: '0' }, 500);
+            }
+        } else {
+            nav.removeClass("stickyNav");
+        }
+    }
+
     useEffect(() => {
         setSliderWidth($('.slider-item')[indexValueRef.current].clientWidth);
     }, []);
@@ -64,6 +83,62 @@ const NavBar = () => {
         sliderRef.current.style.width = `${sliderWidth}px`;
         sliderRef.current.style.left = `${leftPosition}px`;
     }, [sliderWidth, leftPosition]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            const windowWidth = $(window).width();
+            const nav = $('.nav');
+            const container = $('.container');
+            const navElements = $('.nav-elements');
+            const mobileBars = $('.mobile-bars');
+
+            if (windowWidth < 1150) {
+                navElements.hide();
+                mobileBars.show();
+
+                container.css({
+                    margin: 0,
+                    width: '100%',
+                });
+                nav.css({
+                    borderRadius: 0,
+                    width: '100%',
+                });
+            } else {
+                navElements.show();
+                mobileBars.hide();
+
+                container.css({
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    display: 'block',
+                    marginTop: '2vh',
+                    width: '80%',
+                    height: 'auto',
+                });
+                nav.css({
+                    borderRadius: '',
+                    width: '',
+                });
+            }
+        };
+
+        const handleMobileBarsClick = () => {
+            const navElements = $('.nav-elements');
+            navElements.slideToggle();
+        };
+
+        $(window).on('resize', handleResize);
+
+        handleResize();
+
+        $('.mobile-bars').on('click', handleMobileBarsClick);
+
+        return () => {
+            $(window).off('resize', handleResize);
+            $('.mobile-bars').off('click', handleMobileBarsClick);
+        };
+    }, []);
 
     function handeNavClick(index) {
         switch (index) {

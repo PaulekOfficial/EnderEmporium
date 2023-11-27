@@ -104,6 +104,14 @@ body {
   -moz-box-shadow: 1px 1px 20px -3px rgba(150, 150, 150, 1);
   box-shadow: 1px 1px 20px -3px rgba(150, 150, 150, 1);
 }
+
+.stickyNav {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 .nav ul {
   position: relative;
   padding-left: 10px;
@@ -787,15 +795,25 @@ body {
   }
 }
 
-@media only screen and (max-width: 1090px) {
-  .nav-elements {
-    display: none;
-  }
+/*@media only screen and (max-width: 1090px) {*/
+/*  .nav-elements {*/
+/*    display: none;*/
+/*  }*/
 
-  .mobile-bars {
-    display: block;
-  }
-}
+/*  .mobile-bars {*/
+/*    display: block;*/
+/*  }*/
+
+/*  .container {*/
+/*    width: 100%;*/
+/*    margin: 0;*/
+/*  }*/
+
+/*  .nav {*/
+/*    border-radius: 0;*/
+/*    width: 100%;*/
+/*  }*/
+/*}*/
 
 @media only screen and (max-width: 450px) {
   .item {

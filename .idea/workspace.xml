@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc643e8b-4f8c-4cda-89a4-8ca1a4276166" name="Changes" comment="" />
+    <list default="true" id="dc643e8b-4f8c-4cda-89a4-8ca1a4276166" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/nav/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/nav/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +67,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;495c0bf7&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/pawel/WebstormProjects/enderemporium/src/sites/help&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -118,6 +122,8 @@
       <workItem from="1701080125584" duration="2661000" />
       <workItem from="1701085761835" duration="3592000" />
       <workItem from="1701092782225" duration="3632000" />
+      <workItem from="1701106442404" duration="1584000" />
+      <workItem from="1701109652547" duration="2006000" />
     </task>
     <servers />
   </component>
@@ -135,7 +141,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
