@@ -4,16 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc643e8b-4f8c-4cda-89a4-8ca1a4276166" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sites/Layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sites/main/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sites/voutcher/index.js" afterDir="false" />
+    <list default="true" id="93546c85-f25d-44d8-869f-8ba0f4b15039" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/elements/buyOverlay/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/paybylink-logo-black-color-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/payment-failed.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/payment-process.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/payment-success.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sites/order-status/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/item/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/item/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/elements/nav/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/nav/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/pageable/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/pageable/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sites/main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/main/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sites/voutcher/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/voutcher/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,56 +39,32 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitToolBoxStore">
-    <option name="recentBranches">
-      <RecentBranches>
-        <option name="branchesForRepo">
-          <list>
-            <RecentBranchesForRepo>
-              <option name="branches">
-                <list>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1700216171" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1700216170" />
-                  </RecentBranch>
-                </list>
-              </option>
-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
-            </RecentBranchesForRepo>
-          </list>
-        </option>
-      </RecentBranches>
-    </option>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2YIHUpc0NvOJFrvbJJUZMybt8aq" />
+  <component name="ProjectId" id="2YML2dXBZVLyiVSmsRxWEM5ui6h" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pawel/WebstormProjects/enderemporium/src/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Webstorm/EnderEmporium/src/images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\pawel\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -94,7 +79,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\pawel\WebstormProjects\enderemporium\src\images" />
+      <recent name="E:\Webstorm\EnderEmporium\src\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -112,14 +97,19 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dc643e8b-4f8c-4cda-89a4-8ca1a4276166" name="Changes" comment="" />
-      <created>1700206192840</created>
+      <changelist id="93546c85-f25d-44d8-869f-8ba0f4b15039" name="Changes" comment="" />
+      <created>1700330296781</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1700206192840</updated>
-      <workItem from="1700206198265" duration="4758000" />
-      <workItem from="1700211844460" duration="3687000" />
-      <workItem from="1700219447970" duration="4038000" />
+      <updated>1700330296781</updated>
+      <workItem from="1700330298716" duration="4395000" />
+      <workItem from="1700396854709" duration="5831000" />
+      <workItem from="1700406169785" duration="9000" />
+      <workItem from="1700926898174" duration="603000" />
+      <workItem from="1700937606090" duration="2566000" />
+      <workItem from="1700942999660" duration="8838000" />
+      <workItem from="1700990116088" duration="11722000" />
+      <workItem from="1701014196019" duration="1341000" />
     </task>
     <servers />
   </component>

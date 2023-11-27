@@ -1,9 +1,4 @@
-import ItemOffer from "../../elements/item";
-import turbodropIcon from "../../images/dir5y1K.png";
-import Pageable from "../../elements/pageable";
-import ServerStatus from "../../elements/serverStatus";
 import serverIcon from "../../images/server-icon.png";
-import LastBuyers from "../../elements/lastBuyers";
 
 function VoucherSite() {
     return (

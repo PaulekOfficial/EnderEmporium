@@ -5,15 +5,24 @@ import ServerStatus from "../../elements/serverStatus";
 import ItemOffer from "../../elements/item";
 import Pageable from "../../elements/pageable";
 import LastBuyers from "../../elements/lastBuyers";
+import {useEffect, useState} from "react";
+import BuyOverlay from "../../elements/buyOverlay";
 
 function MainSite() {
+    const [showOverlay, setShowOverlay] = useState(false);
+
+    const handleItemButtonClick = (itemId) => {
+        setShowOverlay(true);
+    };
+
+
     return (
         <>
             <div className="items">
                 <div className="elements">
-                    <ItemOffer name={"Ranga VIP"} price={"6.99"} discountPrice={"4.90"} hasDiscount={true} isHighlighted={true}/>
-                    <ItemOffer name={"Ranga VIP ++"} price={"9.99"}/>
-                    <ItemOffer name={"Turbodrop - 30m"} price={"4.99"} image={turbodropIcon}/>
+                    <ItemOffer id={0} name={"Ranga VIP"} price={"6.99"} discountPrice={"4.90"} hasDiscount={true} isHighlighted={true} onButtonClick={handleItemButtonClick} />
+                    <ItemOffer id={1} name={"Ranga VIP ++"} price={"9.99"} onButtonClick={handleItemButtonClick} />
+                    <ItemOffer id={2} name={"Turbodrop - 30m"} price={"4.99"} image={turbodropIcon} onButtonClick={handleItemButtonClick} />
                 </div>
                 <Pageable />
             </div>
@@ -21,6 +30,10 @@ function MainSite() {
                 <ServerStatus icon={serverIcon} ipAddress={"mc.paulek.pro"} onlinePlayers={10}/>
                 <LastBuyers />
             </div>
+
+            {showOverlay && (
+                <BuyOverlay setShowOverlay={setShowOverlay} showOverlay={showOverlay}/>
+            )}
         </>
     );
 }

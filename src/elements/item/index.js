@@ -2,7 +2,11 @@ import funnyImage from "../../images/FDiQFixXsAk37nZ.jpg";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBasketShopping} from "@fortawesome/free-solid-svg-icons";
 
-const ItemOffer = ({ name = "Default Name", image = funnyImage, price = "0.00", discountPrice = "0.00", currency = "PLN", hasDiscount = false, isHighlighted = false }) => {
+const ItemOffer = ({name, id, image = funnyImage, price, discountPrice = "0.00", currency = "PLN", hasDiscount = false, isHighlighted = false, onButtonClick }) => {
+    const handleButtonClick = () => {
+        onButtonClick(id);
+    };
+
     return (
         <div className={`item ${isHighlighted ? 'best-choice' : ''}`}>
             <img src={image} height="673" alt=""/>
@@ -22,10 +26,11 @@ const ItemOffer = ({ name = "Default Name", image = funnyImage, price = "0.00", 
                     )
                 }
             </div>
-            <div className="item-buy">
+
+            <button className="item-buy" onClick={handleButtonClick}>
                 <FontAwesomeIcon icon={faBasketShopping} size={"lg"} style={{float: "left", margin: "5px"}}/>
                 <p>Kup Teraz</p>
-            </div>
+            </button>
         </div>
     )
 }
