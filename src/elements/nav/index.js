@@ -1,17 +1,20 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars, faCogs, faSignIn} from "@fortawesome/free-solid-svg-icons";
-import {Link} from "react-router-dom";
+import {faBars, faCircleQuestion, faCogs, faSignIn} from "@fortawesome/free-solid-svg-icons";
+import {Link, useNavigate} from "react-router-dom";
 import $ from 'jquery';
 import {useEffect, useRef, useState} from "react";
 
 const NavBar = () => {
+    const navigate = useNavigate();
+
     const [sliderWidth, setSliderWidth] = useState(0);
     const [leftPosition, setLeftPosition] = useState(0);
-    const [indexValue, setIndexValue] = useState(null);
+    const [indexValue, setIndexValue] = useState(0);
     const sliderRef = useRef(null);
+    const indexValueRef = useRef(indexValue);
 
     useEffect(() => {
-        setSliderWidth($('.slider-item')[0].clientWidth);
+        setSliderWidth($('.slider-item')[indexValueRef.current].clientWidth);
     }, []);
 
     useEffect(() => {
@@ -23,8 +26,13 @@ const NavBar = () => {
             $item.on('click', function () {
                 const width = $item[0].getBoundingClientRect().width;
                 setSliderWidth(width);
+
                 setIndexValue(index);
+                indexValueRef.current = index;
+
                 setLeftPosition(getLeftPosition(index));
+
+                handeNavClick(index);
             });
 
             $item.on('mouseover', function () {
@@ -34,8 +42,8 @@ const NavBar = () => {
             });
 
             $item.on('mouseout', function () {
-                setSliderWidth(li[0].clientWidth);
-                setLeftPosition(0);
+                setSliderWidth(li[indexValueRef.current].clientWidth);
+                setLeftPosition(getLeftPosition(indexValueRef.current));
             });
         });
     }, [sliderWidth, leftPosition]);
@@ -57,6 +65,23 @@ const NavBar = () => {
         sliderRef.current.style.left = `${leftPosition}px`;
     }, [sliderWidth, leftPosition]);
 
+    function handeNavClick(index) {
+        switch (index) {
+            case 0:
+                navigate("/");
+                break;
+            case 1:
+                navigate("/news");
+                break;
+            case 2:
+                navigate("/voucher");
+                break;
+            case 3:
+                navigate("/rules")
+                break;
+        }
+    }
+
     return (
         <nav className="nav">
             <div className="mobile-bars">
@@ -64,37 +89,29 @@ const NavBar = () => {
             </div>
             <ul className="nav-elements">
                 <span className={"slider"} ref={sliderRef}></span>
-                <Link to="/">
-                    <li className="slider-item">
-                        Strona Główna
-                    </li>
-                </Link>
-                <Link to="/">
-                    <li className="slider-item">
-                        Wiadomości
-                    </li>
-                </Link>
-                <Link to="/voucher">
-                    <li className="slider-item">
-                        Zrealizuj Voucher
-                    </li>
-                </Link>
-                <Link to="/">
-                    <li className="slider-item">
-                        Regulamin
-                    </li>
-                </Link>
+                <li key={"main-site"} className={"slider-item"}>
+                    Strona Główna
+                </li>
+                <li key={"news-site"} className="slider-item">
+                    Wiadomości
+                </li>
+                <li key={"voucher-site"} className="slider-item">
+                    Zrealizuj Voucher
+                </li>
+                <li key={"rules-site"} className="slider-item">
+                    Regulamin
+                </li>
             </ul>
 
             <div className="nav-icons">
                 <div className="nav-icon-item">
-                    <a href="\">
+                    <a href="/login">
                         <FontAwesomeIcon icon={faSignIn} size={"lg"} />
                     </a>
                 </div>
                 <div className="nav-icon-item">
-                    <a href="\">
-                        <FontAwesomeIcon icon={faCogs} size={"lg"} />
+                    <a href="/help">
+                        <FontAwesomeIcon icon={faCircleQuestion} size={"lg"} />
                     </a>
                 </div>
             </div>

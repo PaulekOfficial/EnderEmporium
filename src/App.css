@@ -1,3 +1,16 @@
+/*##################################################################################*/
+/*#                                 Global Elements                                #*/
+/*##################################################################################*/
+
+a {
+  color: #1E1E24;
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+}
+
 body {
   background: url("./images/minecraft-aesthetic-background.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -8,14 +21,17 @@ body {
   color: #1E1E24;
 }
 
+/*##################################################################################*/
+/*#                                    Main APP                                    #*/
+/*##################################################################################*/
+
 .App {
   position: relative;
 }
 
-a {
-  color: #1E1E24;
-  text-decoration: none;
-}
+/*##################################################################################*/
+/*#                                       LOGO                                     #*/
+/*##################################################################################*/
 
 .App-logo {
   margin-top: 1vh;
@@ -58,6 +74,10 @@ a {
   }
 }
 
+/*##################################################################################*/
+/*#                               Main Container                                   #*/
+/*##################################################################################*/
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -66,6 +86,10 @@ a {
   width: 80%;
   height: auto;
 }
+
+/*##################################################################################*/
+/*#                                        NAV                                     #*/
+/*##################################################################################*/
 
 .nav {
   width: 90%;
@@ -132,6 +156,10 @@ a {
   overflow: auto;
   float: right;
 }
+
+/*##################################################################################*/
+/*#                                    MAIN DIV                                    #*/
+/*##################################################################################*/
 
 .main {
   max-width: 90%;
@@ -261,15 +289,27 @@ a {
   margin-left: 15px;
   margin-right: 15px;
   border-radius: 20px;
-  padding: 6px;
+  padding: 3px;
   width: 245px;
   background-color: #111D4A;
+  border: 3px solid #111D4A;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .item-buy p {
   font-weight: bolder;
   margin: 4px 0 4px 0;
+}
+
+.item-buy:hover {
+  position: relative;
+  border: 3px solid #23a523;
+  transition: ease 0.5s;
+}
+
+.item-buy:focus {
+  background: #23a523;
 }
 
 .item-spacer {
@@ -283,6 +323,10 @@ a {
   margin: 15px 0 0 0;
 }
 
+/*##################################################################################*/
+/*#                                   PEAGEABLE                                    #*/
+/*##################################################################################*/
+
 .pageable  {
   background-color: #efeeee;
   border-radius: 20px;
@@ -294,6 +338,9 @@ a {
 }
 
 .page-number {
+  border: 0;
+  font-size: 15px;
+  font-weight: bold;
   float: left;
   height: 35px;
   width: 28px;
@@ -319,16 +366,22 @@ a {
 .page-number p {
   padding: 0;
   margin-top: 6px;
+  cursor: pointer;
 }
 
 .arrow {
   float: left;
   margin: 7px;
+  cursor: pointer;
 }
 
 .arrow-disabled {
   color: darkgray;
 }
+
+/*##################################################################################*/
+/*#                                    SIDEBARS                                    #*/
+/*##################################################################################*/
 
 .sidebar-item {
   display: block;
@@ -342,6 +395,10 @@ a {
   -moz-box-shadow: 1px 1px 20px -3px rgba(150, 150, 150, 1);
   box-shadow: 1px 1px 20px -3px rgba(150, 150, 150, 1);
 }
+
+/*##################################################################################*/
+/*#                                 SERVER INFO                                    #*/
+/*##################################################################################*/
 
 .server-image img {
   margin: 22px;
@@ -400,6 +457,10 @@ a {
   margin-top: 20px;
 }
 
+/*##################################################################################*/
+/*#                                 LAST BUYERS                                    #*/
+/*##################################################################################*/
+
 .last-buy {
   justify-content: center;
   width: auto;
@@ -439,102 +500,9 @@ a {
   display: none;
 }
 
-@media only screen and (max-width: 1726px) {
-  .items {
-    width: 100%;
-    z-index: 1;
-  }
-
-  .sidebar-item {
-    margin-bottom: 20px;
-    width: auto;
-    height: auto;
-    clear: both;
-    float: none;
-  }
-
-  .sidebar-item img {
-    width: 64px;
-    height: auto;
-  }
-
-  .last-buy-item {
-    width: 10%;
-  }
-
-  .last-buy-container {
-    height: fit-content;
-  }
-
-  .last-buy-item img {
-    width: 100%;
-  }
-
-  .server-image img {
-    margin: 18px;
-  }
-
-  .nav-elements {
-    display: none;
-  }
-
-  .mobile-bars {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .item {
-    width: 225px;
-    height: 340px;
-  }
-
-  .item img {
-    height: 165px;
-    width: 200px;
-  }
-
-  .item-price {
-    margin-left: 85px;
-    float: left;
-  }
-
-  .item-spacer {
-    margin: 10px 20px 10px 20px;
-    border-bottom: 3px solid rgb(169, 169, 169);
-    border-radius: 20px;
-  }
-
-  .item-price s {
-    font-size: 10px;
-    margin-top: 2px;
-    margin-left: 2px;
-  }
-
-  .item-price p {
-    float: left;
-    width: fit-content;
-    font-size: 15px;
-    font-weight: bolder;
-    margin: 2px 0 0 0;
-  }
-
-  .item-buy {
-    float: left;
-    margin-top: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    border-radius: 20px;
-    padding: 4px;
-    width: 180px;
-    background-color: #111D4A;
-    color: #ffffff;
-  }
-
-  .item-buy p {
-    margin: 4px 0 4px 0;
-  }
-}
+/*##################################################################################*/
+/*#                                 BUY OVERLAY                                    #*/
+/*##################################################################################*/
 
 .overlay {
   z-index: 5;
@@ -551,8 +519,8 @@ a {
 }
 
 .overlay-content {
-  width: 700px;
-  padding: 0px 20px;
+  max-width: 700px;
+  padding: 0 20px;
   border-radius: 20px;
   background-color: #fffefc;
 
@@ -655,18 +623,22 @@ a {
 
 .overlay-reminder-exclamation {
   font-size: 30px;
-  border: 1px solid rgb(121, 121, 121);
+  border: 3px solid #FAA0A0;
   color: white;
-  background-color: white;
+  background-color: #ff5252;
   border-radius: 30px;
   padding: 10px 23px;
+}
+
+.overlay-reminder-exclamation:after {
+  filter: blur(5px);
 }
 
 .overlay-form {
   text-align: left;
   margin-top: 10px;
   margin-bottom: 20px;
-  padding: 0px 20px;
+  padding: 0 20px;
   border-radius: 10px;
   max-height: 180px;
 
@@ -687,16 +659,24 @@ a {
 .input-container {
   width: 100%;
   margin: 0 20px;
+  display: flex;
   position: relative;
 }
 
 .input-field {
-  width: 100%;
+  width: 289px;
   padding: 10px;
   border: 0;
   border-bottom: 3px solid #4f4f4f;
   border-radius: 5px;
   font-size: 16px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: blueviolet;
+  border-bottom: 3px solid #3bd671;
+  transition: ease 0.5s;
 }
 
 .label {
@@ -720,10 +700,38 @@ a {
 .overlay-form button {
   text-align: center;
   font-weight: bold;
-  border-radius: 8px;
+  margin: 2px;
+  border-radius: 4px;
   background-color: rgba(185, 185, 185, 0.06);
-  border: 2px solid #23a523;
+  border: 2px solid #5d5d5d;
   padding: 8px;
+
+  -webkit-box-shadow: 1px 1px 24px 1px rgba(220, 220, 220, 1);
+  -moz-box-shadow: 1px 1px 24px 1px rgba(220, 220, 220, 1);
+  box-shadow: 1px 1px 24px 1px rgba(220, 220, 220, 1);
+}
+
+.overlay-form > .active {
+  background-color: #23a523;
+  color: white;
+}
+
+.overlay-final-controls button {
+  margin: 0 10px 20px 10px;
+  padding: 8px;
+  font-weight: bolder;
+  font-size: 15px;
+
+  color: white;
+  border-radius: 14px;
+  -webkit-box-shadow: 1px 1px 24px 1px rgba(220, 220, 220, 1);
+  -moz-box-shadow: 1px 1px 24px 1px rgba(220, 220, 220, 1);
+  box-shadow: 1px 1px 24px 1px rgba(220, 220, 220, 1);
+}
+
+.overlay-final-controls button:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
 }
 
 .overlay-content.scale {
@@ -736,5 +744,108 @@ a {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/*##################################################################################*/
+/*#                                RESPONSIVITY                                    #*/
+/*##################################################################################*/
+
+@media only screen and (max-width: 1726px) {
+  .items {
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidebar-item {
+    margin-bottom: 20px;
+    width: auto;
+    height: auto;
+    clear: both;
+    float: none;
+  }
+
+  .sidebar-item img {
+    width: 64px;
+    height: auto;
+  }
+
+  .last-buy-item {
+    width: 10%;
+  }
+
+  .last-buy-container {
+    height: fit-content;
+  }
+
+  .last-buy-item img {
+    width: 100%;
+  }
+
+  .server-image img {
+    margin: 18px;
+  }
+}
+
+@media only screen and (max-width: 1090px) {
+  .nav-elements {
+    display: none;
+  }
+
+  .mobile-bars {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .item {
+    width: 225px;
+    height: 340px;
+  }
+
+  .item img {
+    height: 165px;
+    width: 200px;
+  }
+
+  .item-price {
+    margin-left: 85px;
+    float: left;
+  }
+
+  .item-spacer {
+    margin: 10px 20px 10px 20px;
+    border-bottom: 3px solid rgb(169, 169, 169);
+    border-radius: 20px;
+  }
+
+  .item-price s {
+    font-size: 10px;
+    margin-top: 2px;
+    margin-left: 2px;
+  }
+
+  .item-price p {
+    float: left;
+    width: fit-content;
+    font-size: 15px;
+    font-weight: bolder;
+    margin: 2px 0 0 0;
+  }
+
+  .item-buy {
+    float: left;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 20px;
+    padding: 4px;
+    width: 180px;
+    background-color: #111D4A;
+    color: #ffffff;
+  }
+
+  .item-buy p {
+    margin: 4px 0 4px 0;
   }
 }

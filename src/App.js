@@ -5,6 +5,7 @@ import MainSite from "./sites/main";
 import Layout from "./sites/Layout";
 import VoucherSite from "./sites/voutcher";
 import OrderStatusSite from "./sites/order-status";
+import HelpSite from "./sites/help";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                     <Route path={"page/*"} element={<MainSite />} />
                     <Route path={"order/lazy-status/*"} element={<OrderStatusSite />} />
                     <Route path={"voucher"} element={<VoucherSite />} />
+                    <Route path={"help"} element={<HelpSite />} />
                 </Route>
             </Routes>
         </BrowserRouter>

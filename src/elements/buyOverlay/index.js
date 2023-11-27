@@ -35,6 +35,7 @@ function BuyOverlay({ setShowOverlay, showOverlay }) {
                     </div>
                     <div className={"overlay-content-description"}>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, aliquam, assumenda cumque eius eum hic labore laudantium neque nesciunt nihil nisi odio, placeat reiciendis repellendus reprehenderit repudiandae veniam vitae!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aut debitis dignissimos exercitationem hic id, itaque, magni nemo neque nisi nobis nulla placeat possimus quod, saepe sapiente veritatis? Excepturi.
                     </div>
                 </div>
                 <div className={"overlay-quantity"}>
@@ -52,7 +53,7 @@ function BuyOverlay({ setShowOverlay, showOverlay }) {
 
                 <div className={"overlay-form"}>
                     <h3>Wybież motodę płatności</h3>
-                    <button onClick={handleCloseOverlay}>
+                    <button onClick={handleCloseOverlay} className={"active"}>
                             <span>
                                 PAYPAL
                             </span>
@@ -68,20 +69,20 @@ function BuyOverlay({ setShowOverlay, showOverlay }) {
                     <div className={"overlay-inputs"}>
                         <div className="input-container">
                             <input type="text" className="input-field" required />
-                            <label htmlFor="input" className="label">Wpisz tekst</label>
+                            <label htmlFor="input" className="label">Wpisz pseudonim z gry</label>
                         </div>
                         <div className="input-container">
                             <input type="text" className="input-field" required />
-                            <label htmlFor="input" className="label">Wpisz tekst</label>
+                            <label htmlFor="input" className="label">Wpisz kod rabatowy (opcionalne)</label>
                         </div>
                     </div>
 
                     <br /><br />
                 </div>
 
-                <div className={""}>
-                    <button onClick={handleCloseOverlay}>Anuluj</button>
-                    <button onClick={handleCloseOverlay}>Sfinalizuj Zakup</button>
+                <div className={"overlay-final-controls"}>
+                    <button onClick={handleCloseOverlay} style={{backgroundColor: "#ff9393"}}>Anuluj</button>
+                    <button onClick={handleCloseOverlay} style={{backgroundColor: "#67d567"}}>Sfinalizuj Zakup</button>
                 </div>
             </div>
         </div>

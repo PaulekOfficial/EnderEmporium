@@ -3,7 +3,7 @@ import pendingGif from "../../images/payment-process.gif";
 import failedGif from "../../images/payment-failed.gif";
 
 function OrderStatusSite() {
-    let status = "FAILED";
+    let status = "SUCCESS";
 
     const images = {
         SUCCESS: successGif,
