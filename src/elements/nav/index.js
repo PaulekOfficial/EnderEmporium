@@ -21,14 +21,27 @@ const NavBar = () => {
     const handleScroll = () => {
         const nav = $('.nav');
         const offset= window.scrollY;
-        if(offset > 120 ){
-            if (!nav.hasClass('stickyNav')) {
-                nav.addClass('stickyNav');
-                nav.css({ opacity: 0, top: '-50px' });
-                nav.animate({ opacity: 1, top: '0' }, 500);
-            }
+        const windowWidth = $(window).width();
+        if((offset > 120) && (windowWidth < 1150)) {
+            stickStickyNav();
         } else {
-            nav.removeClass("stickyNav");
+            removeStickyNav();
+        }
+    }
+
+    function stickStickyNav() {
+        const nav = $('.nav');
+        if (!nav.hasClass('stickyNav')) {
+            nav.addClass('stickyNav');
+            nav.css({ opacity: 0, top: '-50px' });
+            nav.animate({ opacity: 1, top: '0' }, 500);
+        }
+    }
+
+    function removeStickyNav() {
+        const nav = $('.nav');
+        if (nav.hasClass('stickyNav')) {
+            nav.removeClass('stickyNav');
         }
     }
 
@@ -104,6 +117,8 @@ const NavBar = () => {
                     borderRadius: 0,
                     width: '100%',
                 });
+
+                stickStickyNav();
             } else {
                 navElements.show();
                 mobileBars.hide();
@@ -120,6 +135,8 @@ const NavBar = () => {
                     borderRadius: '',
                     width: '',
                 });
+
+                removeStickyNav();
             }
         };
 
