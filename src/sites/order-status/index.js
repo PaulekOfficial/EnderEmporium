@@ -1,9 +1,11 @@
 import successGif from "../../images/payment-success.gif";
 import pendingGif from "../../images/payment-process.gif";
 import failedGif from "../../images/payment-failed.gif";
+import {useEffect, useState} from "react";
 
 function OrderStatusSite() {
     let status = "SUCCESS";
+    const [isVisible, setIsVisible] = useState(true);
 
     const images = {
         SUCCESS: successGif,
@@ -13,7 +15,7 @@ function OrderStatusSite() {
 
     return (
         <>
-            <div className="items maximize-items">
+            <div className={`items maximize-items ${isVisible ? 'fadeIn' : 'fadeOut'}`}>
                 <div className="elements" style={{padding: "40px"}}>
                     <img src={images[status]} alt={""} style={{maxWidth: "300px", maxHeight: "225px"}}/>
                     <h1 style={{width: "100%"}}>

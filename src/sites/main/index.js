@@ -10,15 +10,15 @@ import BuyOverlay from "../../elements/buyOverlay";
 
 function MainSite() {
     const [showOverlay, setShowOverlay] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
 
     const handleItemButtonClick = (itemId) => {
         setShowOverlay(true);
     };
 
-
     return (
         <>
-            <div className="items">
+            <div className={`items ${isVisible ? 'fadeIn' : 'fadeOut'}`}>
                 <div className="elements">
                     <ItemOffer id={0} name={"Ranga VIP"} price={"6.99"} discountPrice={"4.90"} hasDiscount={true} isHighlighted={true} onButtonClick={handleItemButtonClick} />
                     <ItemOffer id={1} name={"Ranga VIP ++"} price={"9.99"} onButtonClick={handleItemButtonClick} />
@@ -26,7 +26,7 @@ function MainSite() {
                 </div>
                 <Pageable />
             </div>
-            <div className="sidebar">
+            <div className={`sidebar ${isVisible ? 'fadeIn' : 'fadeOut'}`}>
                 <ServerStatus icon={serverIcon} ipAddress={"mc.paulek.pro"} onlinePlayers={10}/>
                 <LastBuyers />
             </div>

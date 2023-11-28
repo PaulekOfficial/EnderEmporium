@@ -6,6 +6,7 @@ import Layout from "./sites/Layout";
 import VoucherSite from "./sites/voutcher";
 import OrderStatusSite from "./sites/order-status";
 import HelpSite from "./sites/help";
+import {AnimatedRoutes} from "./elements/animatedRoute";
 
 function App() {
     return (

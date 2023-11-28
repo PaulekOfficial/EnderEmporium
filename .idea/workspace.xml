@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc643e8b-4f8c-4cda-89a4-8ca1a4276166" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_11_2023_10_01__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_11_2023_10_01__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/animatedRoute/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/buyOverlay/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/buyOverlay/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/elements/nav/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/nav/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/serverStatus/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/serverStatus/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sites/help/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/help/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sites/main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/main/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sites/order-status/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/order-status/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sites/voutcher/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/voutcher/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +132,9 @@
       <workItem from="1701092782225" duration="3632000" />
       <workItem from="1701106442404" duration="1584000" />
       <workItem from="1701109652547" duration="4953000" />
-      <workItem from="1701166125331" duration="4124000" />
+      <workItem from="1701166125331" duration="4573000" />
+      <workItem from="1701172843308" duration="93000" />
+      <workItem from="1701177342259" duration="11538000" />
     </task>
     <servers />
   </component>

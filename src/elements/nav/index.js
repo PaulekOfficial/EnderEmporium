@@ -120,6 +120,15 @@ const NavBar = () => {
         sliderRef.current.style.left = `${leftPosition}px`;
     }, [sliderWidth, leftPosition]);
 
+    const handleMobileBarsClick = () => {
+        const navElements = $('.nav-elements');
+        if(!navElements.hasClass('mobile-elements')) {
+            return;
+        }
+
+        navElements.slideToggle();
+    };
+
     useEffect(() => {
         const handleResize = () => {
             const windowWidth = $(window).width();
@@ -166,11 +175,6 @@ const NavBar = () => {
             }
         };
 
-        const handleMobileBarsClick = () => {
-            const navElements = $('.nav-elements');
-            navElements.slideToggle();
-        };
-
         $(window).on('resize', handleResize);
         handleResize();
 
@@ -194,7 +198,7 @@ const NavBar = () => {
                 navigate("/voucher");
                 break;
             case 3:
-                navigate("/rules")
+                navigate("/rules");
                 break;
         }
     }
@@ -207,16 +211,16 @@ const NavBar = () => {
                 </div>
                 <ul className="nav-elements">
                     <span className={"slider"} ref={sliderRef}></span>
-                    <li key={"main-site"} className={"slider-item"}>
+                    <li key={"main-site"} className={"slider-item"} onClick={() => {handleMobileBarsClick()}}>
                         Strona Główna
                     </li>
-                    <li key={"news-site"} className={"slider-item"}>
+                    <li key={"news-site"} className={"slider-item"} onClick={() => {handleMobileBarsClick()}}>
                         Wiadomości
                     </li>
-                    <li key={"voucher-site"} className={"slider-item"}>
+                    <li key={"voucher-site"} className={"slider-item"} onClick={() => {handleMobileBarsClick()}}>
                         Zrealizuj Voucher
                     </li>
-                    <li key={"rules-site"} className={"slider-item"}>
+                    <li key={"rules-site"} className={"slider-item"} onClick={() => {handleMobileBarsClick()}}>
                         Regulamin
                     </li>
                 </ul>

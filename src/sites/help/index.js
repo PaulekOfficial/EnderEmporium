@@ -1,12 +1,14 @@
 import successGif from "../../images/call_center.gif";
 import {faMailBulk, faMessage, faPlaneDeparture, faSignIn, faUser} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {useEffect, useState} from "react";
 
 function HelpSite() {
+    const [isVisible, setIsVisible] = useState(true);
 
     return (
         <>
-            <div className="items maximize-items">
+            <div className={`items maximize-items ${isVisible ? 'fadeIn' : 'fadeOut'}`}>
                 <div className="elements" style={{padding: "40px"}}>
                     <img src={successGif} alt={""} style={{maxWidth: "147px", maxHeight: "110px"}}/>
                     <h1 style={{width: "100%", marginTop: "5px", marginBottom: "5px"}}>
@@ -15,16 +17,16 @@ function HelpSite() {
                     <p style={{ width: "100%" }}>
                         Używając tego formulaża - wyślij wiadomość do administratora tego sklepu, twój problem zostanie rozpatrzony w ciągu 48h.
                     </p>
-                    <form>
-                        <div className={"overlay-inputs"}>
-                            <div className="input-container">
+                    <form style={{width: "80%"}}>
+                        <div className={"overlay-inputs"} style={{display: "flex", flexFlow: "none", justifyContent: "center"}}>
+                            <div className="input-container" style={{float: "left", maxWidth: "100%"}}>
                                 <input type="text" className="input-field" required />
                                 <label htmlFor="input" className="label">
                                     <FontAwesomeIcon icon={faMailBulk} size={"lg"} style={{marginRight: "10px"}} />
                                     Podaj swój adres e-mail
                                 </label>
                             </div>
-                            <div className="input-container">
+                            <div className="input-container" style={{float: "left", maxWidth: "100%"}}>
                                 <input type="text" className="input-field" required />
                                 <label htmlFor="input" className="label">
                                     <FontAwesomeIcon icon={faUser} size={"lg"} style={{marginRight: "10px"}} />

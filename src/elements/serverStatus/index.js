@@ -1,7 +1,11 @@
 const ServerStatus = ({icon, ipAddress = "server address ipv4", onlinePlayers = 0, maxPlayers = 100}) => {
+    function funnyEasterEgg() {
+        window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1", "_blank");
+    }
+
     return (
         <div className="sidebar-item">
-            <div className="server-image">
+            <div className="server-image" onClick={() => funnyEasterEgg()}>
                 <img src={icon}  alt="Server Icon"/>
             </div>
             <div className="server-description">

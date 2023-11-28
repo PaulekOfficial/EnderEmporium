@@ -558,10 +558,11 @@ body {
 
 .overlay-content {
   max-width: 700px;
+  max-height: 95vh; /* Set a maximum height for the overlay content */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
   padding: 0 20px;
   border-radius: 20px;
   background-color: #fffefc;
-
   -webkit-box-shadow: 1px 1px 20px -3px rgba(150, 150, 150, 1);
   -moz-box-shadow: 1px 1px 20px -3px rgba(150, 150, 150, 1);
   box-shadow: 1px 1px 20px -3px rgba(150, 150, 150, 1);
@@ -572,6 +573,7 @@ body {
 }
 
 .overlay-content-header {
+  width: 100%;
   padding-top: 15px;
   min-height: 200px;
   border-radius: 10px;
@@ -678,7 +680,7 @@ body {
   margin-bottom: 20px;
   padding: 0 20px;
   border-radius: 10px;
-  max-height: 180px;
+  height: auto;
 
   background-color: white;
   border: 2px solid rgba(220, 220, 220, 1);
@@ -688,21 +690,26 @@ body {
   box-shadow: 1px 1px 24px 1px rgba(220, 220, 220, 1);
 }
 
+.overlay-payment {
+  margin-bottom: 40px;
+  margin-left: 20px;
+}
+
 .overlay-inputs {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .input-container {
-  width: 100%;
-  margin: 0 20px;
   display: flex;
+  width: 100%;
+  margin: 0 20px 10px 20px;
   position: relative;
 }
 
 .input-field {
-  width: 289px;
+  width: 100%;
   padding: 10px;
   border: 0;
   border-bottom: 3px solid #4f4f4f;
@@ -740,7 +747,7 @@ body {
   font-weight: bold;
   margin: 2px;
   border-radius: 4px;
-  background-color: rgba(185, 185, 185, 0.06);
+  /*background-color: rgba(185, 185, 185, 0.06);*/
   border: 2px solid #5d5d5d;
   padding: 8px;
 
@@ -749,7 +756,7 @@ body {
   box-shadow: 1px 1px 24px 1px rgba(220, 220, 220, 1);
 }
 
-.overlay-form > .active {
+.active-payment-method {
   background-color: #23a523;
   color: white;
 }
@@ -840,25 +847,50 @@ body {
   }
 }
 
-/*@media only screen and (max-width: 1090px) {*/
-/*  .nav-elements {*/
-/*    display: none;*/
-/*  }*/
+@media only screen and (max-width: 810px) {
+  .help-text-wrap-mobile {
+    flex-wrap: wrap;
+  }
+}
 
-/*  .mobile-bars {*/
-/*    display: block;*/
-/*  }*/
+@media only screen and (max-width: 790px) {
+  .overlay-inputs {
+    flex-wrap: wrap;
+  }
 
-/*  .container {*/
-/*    width: 100%;*/
-/*    margin: 0;*/
-/*  }*/
+  .input-container {
+    margin: 10px 0;
+  }
 
-/*  .nav {*/
-/*    border-radius: 0;*/
-/*    width: 100%;*/
-/*  }*/
-/*}*/
+  .overlay-content {
+    width: 80%;
+  }
+
+  .overlay-content h2 {
+    text-align: center;
+  }
+
+  .overlay-content-header {
+    flex-wrap: wrap;
+  }
+
+  .overlay-content-icon {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    float: none;
+  }
+
+  .overlay-content-description {
+    padding: 10px;
+    float: none;
+    width: 100%;
+  }
+
+  .overlay-form {
+    height: auto;
+  }
+}
 
 @media only screen and (max-width: 450px) {
   .item {
@@ -910,5 +942,35 @@ body {
 
   .item-buy p {
     margin: 4px 0 4px 0;
+  }
+}
+
+.fadeIn {
+  animation: 0.5s fadeIn forwards;
+}
+
+.fadeOut {
+  animation: 0.5s fadeOut forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(-20px, 0);
+    opacity: 0;
   }
 }
