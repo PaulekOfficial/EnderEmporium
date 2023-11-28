@@ -7,6 +7,7 @@ import {useEffect, useRef, useState} from "react";
 const NavBar = () => {
     const navigate = useNavigate();
 
+    const [stickNav, setStickNav] = useState(false);
     const [sliderWidth, setSliderWidth] = useState(0);
     const [leftPosition, setLeftPosition] = useState(0);
     const [indexValue, setIndexValue] = useState(0);
@@ -24,14 +25,20 @@ const NavBar = () => {
         const windowWidth = $(window).width();
         if((offset > 120) && (windowWidth < 1150)) {
             stickStickyNav();
+            setStickNav(true);
         } else {
             removeStickyNav();
+            setStickNav(false);
         }
     }
 
     function stickStickyNav() {
         const nav = $('.nav');
         if (!nav.hasClass('stickyNav')) {
+            $('.App-header').css({
+                marginBottom: "60px",
+            });
+
             nav.addClass('stickyNav');
             nav.css({ opacity: 0, top: '-50px' });
             nav.animate({ opacity: 1, top: '0' }, 500);
@@ -41,6 +48,10 @@ const NavBar = () => {
     function removeStickyNav() {
         const nav = $('.nav');
         if (nav.hasClass('stickyNav')) {
+            $('.App-header').css({
+                marginBottom: 0,
+            });
+
             nav.removeClass('stickyNav');
         }
     }
@@ -56,6 +67,10 @@ const NavBar = () => {
             const $item = $(item);
 
             $item.on('click', function () {
+                if (stickNav) {
+                    return;
+                }
+
                 const width = $item[0].getBoundingClientRect().width;
                 setSliderWidth(width);
 
@@ -68,12 +83,20 @@ const NavBar = () => {
             });
 
             $item.on('mouseover', function () {
+                if (stickNav) {
+                    return;
+                }
+
                 const width = $item[0].getBoundingClientRect().width;
                 setSliderWidth(width);
                 setLeftPosition(getLeftPosition(index));
             });
 
             $item.on('mouseout', function () {
+                if (stickNav) {
+                    return;
+                }
+
                 setSliderWidth(li[indexValueRef.current].clientWidth);
                 setLeftPosition(getLeftPosition(indexValueRef.current));
             });
@@ -104,10 +127,14 @@ const NavBar = () => {
             const container = $('.container');
             const navElements = $('.nav-elements');
             const mobileBars = $('.mobile-bars');
+            const slider = $('.slider');
 
             if (windowWidth < 1150) {
                 navElements.hide();
+                slider.hide();
                 mobileBars.show();
+
+                navElements.addClass("mobile-elements");
 
                 container.css({
                     margin: 0,
@@ -117,11 +144,12 @@ const NavBar = () => {
                     borderRadius: 0,
                     width: '100%',
                 });
-
-                stickStickyNav();
             } else {
                 navElements.show();
+                slider.show();
                 mobileBars.hide();
+
+                navElements.removeClass("mobile-elements");
 
                 container.css({
                     marginLeft: 'auto',
@@ -135,8 +163,6 @@ const NavBar = () => {
                     borderRadius: '',
                     width: '',
                 });
-
-                removeStickyNav();
             }
         };
 
@@ -146,7 +172,6 @@ const NavBar = () => {
         };
 
         $(window).on('resize', handleResize);
-
         handleResize();
 
         $('.mobile-bars').on('click', handleMobileBarsClick);
@@ -175,40 +200,38 @@ const NavBar = () => {
     }
 
     return (
-        <nav className="nav">
-            <div className="mobile-bars">
-                <FontAwesomeIcon icon={faBars} size={"lg"} />
-            </div>
-            <ul className="nav-elements">
-                <span className={"slider"} ref={sliderRef}></span>
-                <li key={"main-site"} className={"slider-item"}>
-                    Strona Główna
-                </li>
-                <li key={"news-site"} className="slider-item">
-                    Wiadomości
-                </li>
-                <li key={"voucher-site"} className="slider-item">
-                    Zrealizuj Voucher
-                </li>
-                <li key={"rules-site"} className="slider-item">
-                    Regulamin
-                </li>
-            </ul>
+        <>
+            <nav className="nav">
+                <div className="mobile-bars">
+                    <FontAwesomeIcon icon={faBars} size={"lg"} />
+                </div>
+                <ul className="nav-elements">
+                    <span className={"slider"} ref={sliderRef}></span>
+                    <li key={"main-site"} className={"slider-item"}>
+                        Strona Główna
+                    </li>
+                    <li key={"news-site"} className={"slider-item"}>
+                        Wiadomości
+                    </li>
+                    <li key={"voucher-site"} className={"slider-item"}>
+                        Zrealizuj Voucher
+                    </li>
+                    <li key={"rules-site"} className={"slider-item"}>
+                        Regulamin
+                    </li>
+                </ul>
 
-            <div className="nav-icons">
-                <div className="nav-icon-item">
-                    <a href="/login">
+                <div className="nav-icons">
+                    <div className="nav-icon-item" onClick={() => navigate("/login")} style={{cursor: "pointer"}}>
                         <FontAwesomeIcon icon={faSignIn} size={"lg"} />
-                    </a>
-                </div>
-                <div className="nav-icon-item">
-                    <a href="/help">
+                    </div>
+                    <div className="nav-icon-item" onClick={() => navigate("/help")} style={{cursor: "pointer"}}>
                         <FontAwesomeIcon icon={faCircleQuestion} size={"lg"} />
-                    </a>
+                    </div>
                 </div>
-            </div>
-            <div style={{clear: "both"}}></div>
-        </nav>
+                <div style={{clear: "both"}}></div>
+            </nav>
+        </>
     )
 }
 
