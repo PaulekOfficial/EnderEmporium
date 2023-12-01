@@ -7,18 +7,23 @@ import Pageable from "../../elements/pageable";
 import LastBuyers from "../../elements/lastBuyers";
 import {useEffect, useState} from "react";
 import BuyOverlay from "../../elements/buyOverlay";
+import $ from "jquery";
 
 function MainSite() {
     const [showOverlay, setShowOverlay] = useState(false);
-    const [isVisible, setIsVisible] = useState(true);
 
     const handleItemButtonClick = (itemId) => {
         setShowOverlay(true);
     };
 
+    useEffect(() => {
+        $('.items').addClass('fadeIn');
+        $('.sidebar').addClass('fadeIn');
+    }, []);
+
     return (
         <>
-            <div className={`items ${isVisible ? 'fadeIn' : 'fadeOut'}`}>
+            <div className={`items`}>
                 <div className="elements">
                     <ItemOffer id={0} name={"Ranga VIP"} price={"6.99"} discountPrice={"4.90"} hasDiscount={true} isHighlighted={true} onButtonClick={handleItemButtonClick} />
                     <ItemOffer id={1} name={"Ranga VIP ++"} price={"9.99"} onButtonClick={handleItemButtonClick} />
@@ -26,7 +31,7 @@ function MainSite() {
                 </div>
                 <Pageable />
             </div>
-            <div className={`sidebar ${isVisible ? 'fadeIn' : 'fadeOut'}`}>
+            <div className={`sidebar`}>
                 <ServerStatus icon={serverIcon} ipAddress={"mc.paulek.pro"} onlinePlayers={10}/>
                 <LastBuyers />
             </div>

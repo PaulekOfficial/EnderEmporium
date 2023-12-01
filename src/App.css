@@ -558,8 +558,9 @@ body {
 
 .overlay-content {
   max-width: 700px;
-  max-height: 95vh; /* Set a maximum height for the overlay content */
-  overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
+  max-height: 95vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: 0 20px;
   border-radius: 20px;
   background-color: #fffefc;
@@ -573,7 +574,6 @@ body {
 }
 
 .overlay-content-header {
-  width: 100%;
   padding-top: 15px;
   min-height: 200px;
   border-radius: 10px;
@@ -607,7 +607,6 @@ body {
 }
 
 .overlay-quantity {
-  width: 100%;
   border-radius: 10px;
   margin-top: 10px;
   background-color: white;
@@ -691,7 +690,7 @@ body {
 }
 
 .overlay-payment {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-left: 20px;
 }
 
@@ -762,7 +761,7 @@ body {
 }
 
 .overlay-final-controls button {
-  margin: 0 10px 20px 10px;
+  margin: 0 10px 20px 0;
   padding: 8px;
   font-weight: bolder;
   font-size: 15px;

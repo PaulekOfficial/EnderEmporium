@@ -1,12 +1,15 @@
 import serverIcon from "../../images/server-icon.png";
 import {useEffect, useState} from "react";
+import $ from "jquery";
 
 function VoucherSite() {
-    const [isVisible, setIsVisible] = useState(true);
+    useEffect(() => {
+        $('.items').addClass('fadeIn');
+    }, []);
 
     return (
         <>
-            <div className={`items maximize-items ${isVisible ? 'fadeIn' : 'fadeOut'}`}>
+            <div className={`items maximize-items`}>
                 <div className="elements">
                     <h1>Zrealizuj Voutcher</h1>
 

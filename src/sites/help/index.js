@@ -2,14 +2,17 @@ import successGif from "../../images/call_center.gif";
 import {faMailBulk, faMessage, faPlaneDeparture, faSignIn, faUser} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useEffect, useState} from "react";
+import $ from "jquery";
 
 function HelpSite() {
-    const [isVisible, setIsVisible] = useState(true);
+    useEffect(() => {
+        $('.items').addClass('fadeIn');
+    }, []);
 
     return (
         <>
-            <div className={`items maximize-items ${isVisible ? 'fadeIn' : 'fadeOut'}`}>
-                <div className="elements" style={{padding: "40px"}}>
+            <div className={`items maximize-items`}>
+                <div className="elements" style={{padding: "20px"}}>
                     <img src={successGif} alt={""} style={{maxWidth: "147px", maxHeight: "110px"}}/>
                     <h1 style={{width: "100%", marginTop: "5px", marginBottom: "5px"}}>
                         Potrzebujesz pomocy? Już pomagamy

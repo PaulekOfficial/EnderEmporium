@@ -61,7 +61,7 @@ function BuyOverlay({ setShowOverlay, showOverlay }) {
                 </div>
                 <div className={"overlay-reminder"}>
                     <FontAwesomeIcon icon={faExclamation} size={"lg"} className={"overlay-reminder-exclamation"} />
-                    <p>W momencie zakupu tego produktu musisz znajdować się na serwerze.</p>
+                    <p>W momencie zakupu musisz znajdować się na serwerze.</p>
                 </div>
 
                 <div className={"overlay-form"}>
