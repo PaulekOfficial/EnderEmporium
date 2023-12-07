@@ -1,6 +1,5 @@
 import lawIcon from "../../images/AJAX-plyn-uniwersalny-BOOST-ZESTAW-MIX-3x-1L.jpg";
 import {useEffect, useState} from "react";
-import jsonData from './news.json';
 import $ from "jquery";
 import NewsElement from "../../elements/newsElement";
 
@@ -15,11 +14,12 @@ function NewsSite() {
 
     const fetchData = () => {
         $.ajax({
-            url: {jsonData},
+            url: 'http://localhost:8080/api/v1/news/',
             method: 'GET',
             dataType: 'json',
             success: function (result) {
-                setNewsData(result);
+                const newsData = result._embedded.newsEntryList;
+                setNewsData(newsData);
             },
             error: function (error) {
                 console.error('Error fetching data:', error);
@@ -45,23 +45,13 @@ function NewsSite() {
                     ) : (
                         newsData.map((news, index) => (
                             <NewsElement
-                                key={index}
+                                key={"news-id-" + index}
                                 title={news.title}
                                 tags={news.tags}
                                 description={news.description}
                             />
                         ))
                     )}
-
-                    {/*<NewsElement*/}
-                    {/*    title={"EnderEmporeum - Start sklepu"}*/}
-                    {/*    tags={["EnderEmporeum", "Sklep", "Start"]}*/}
-                    {/*    description={"Ostatnie przygotowania do uruchomienia systemu sklepu Ender Emporeum są już w toku, a ekipa\n" +*/}
-                    {/*    "                        zaangażowana w ten projekt gorączkowo pracuje, by zapewnić klientom niezapomniane doświadczenia\n" +*/}
-                    {/*    "                        zakupowe. Zespół EnderEmporeum ogłosił oficjalny start swojego sklepu, który ma miejsce za kilka\n" +*/}
-                    {/*    "                        dni."}*/}
-                    {/*/>*/}
-                    {/*<NewsElement />*/}
                 </div>
             </div>
         </>

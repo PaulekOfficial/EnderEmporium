@@ -23,7 +23,7 @@ const NavBar = () => {
     };
 
     useEffect(() => {
-        if (location.pathname === "/help") {
+        if (location.pathname === "/help" || location.pathname === "/order/lazy-status") {
             return;
         }
 
