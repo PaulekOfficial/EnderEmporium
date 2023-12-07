@@ -5,6 +5,42 @@ import {useEffect, useState} from "react";
 import $ from "jquery";
 
 function HelpSite() {
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [validName, setValidName] = useState(true);
+    const [validEmail, setValidEmail] = useState(true);
+
+    const validateEmail = (email) => {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    const validateName = (name) => {
+        const re = /^[a-zA-Z ]{2,30}$/;
+        return re.test(String(name));
+    }
+
+    const handleSubmit = (event) => {
+        let formError = document.querySelector('.help-form-error');
+        event.preventDefault();
+        if (!validateEmail(email)) {
+            formError.innerHTML = 'Wpisz poprawny adres e-mail';
+            setValidEmail(false);
+            return;
+        }
+        setValidEmail(true);
+
+        if (!validateName(name)) {
+            formError.innerHTML = 'Wpisz poprawny pseudonim';
+            setValidName(false);
+            return;
+        }
+        setValidName(true);
+
+
+        //TODO: Send message to admin
+    }
+
     useEffect(() => {
         $('.items').addClass('fadeIn');
     }, []);
@@ -21,16 +57,17 @@ function HelpSite() {
                         Używając tego formulaża - wyślij wiadomość do administratora tego sklepu, twój problem zostanie rozpatrzony w ciągu 48h.
                     </p>
                     <form style={{width: "80%"}}>
+                        <p className={"help-form-error"} style={{color: "red", padding: "15px"}}></p>
                         <div className={"overlay-inputs"} style={{display: "flex", flexFlow: "none", justifyContent: "center"}}>
-                            <div className="input-container" style={{float: "left", maxWidth: "100%"}}>
-                                <input type="text" className="input-field" required />
+                            <div className={`input-container ${!validEmail ? 'input-error' : ''}`} style={{float: "left", maxWidth: "100%"}}>
+                                <input type="text" className="input-field" required onChange={e => setEmail(e.target.value)}/>
                                 <label htmlFor="input" className="label">
                                     <FontAwesomeIcon icon={faMailBulk} size={"lg"} style={{marginRight: "10px"}} />
                                     Podaj swój adres e-mail
                                 </label>
                             </div>
-                            <div className="input-container" style={{float: "left", maxWidth: "100%"}}>
-                                <input type="text" className="input-field" required />
+                            <div className={`input-container ${!validateName ? 'input-error' : ''}`} style={{float: "left", maxWidth: "100%"}}>
+                                <input type="text" className="input-field" required onChange={e => setName(e.target.value)}/>
                                 <label htmlFor="input" className="label">
                                     <FontAwesomeIcon icon={faUser} size={"lg"} style={{marginRight: "10px"}} />
                                     Twój pseudonim
@@ -50,7 +87,7 @@ function HelpSite() {
                             </div>
                         </div>
 
-                        <button className="help-button" style={{ textAlign: 'center' }}>
+                        <button className="help-button" style={{ textAlign: 'center', backgroundColor: '#007BFF', color: '#FFFFFF' }} onClick={e => handleSubmit(e)}>
                             <FontAwesomeIcon icon={faPlaneDeparture} size="lg" style={{ marginRight: "10px", verticalAlign: "middle" }} />
                             <p style={{ display: 'inline-block', verticalAlign: 'middle', margin: 0 }}>Wyślij Wiadomość</p>
                         </button>

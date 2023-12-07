@@ -2,13 +2,24 @@ import '../App.css';
 import NavBar from "../elements/nav";
 import Header from "../elements/header";
 import {Outlet} from "react-router-dom";
-import cookieIcon from "../images/3580617sz0ygexqpz.gif";
-import {faBasketShopping, faCross, faCrosshairs, faXmark} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {useEffect, useState} from "react";
+import LoadingScreen from "../elements/loading";
+import $ from "jquery";
+import {fas} from "@fortawesome/free-solid-svg-icons";
 
 function Layout() {
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            $('.loading-screen').fadeOut('fast');
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+
     return (
         <div className="App">
+            <LoadingScreen/>
             <Header />
             <div className="container">
                 <NavBar />

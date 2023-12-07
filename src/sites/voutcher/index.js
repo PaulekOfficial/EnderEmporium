@@ -2,7 +2,11 @@ import voucherIcon from "../../images/Voucher-PNG-Images.png";
 import {useEffect, useState} from "react";
 import $ from "jquery";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCode, faMailBulk, faMessage, faPerson, faPlaneDeparture, faUser} from "@fortawesome/free-solid-svg-icons";
+import {
+    faArrowCircleRight,
+    faCode,
+    faPerson,
+} from "@fortawesome/free-solid-svg-icons";
 
 function VoucherSite() {
     useEffect(() => {
@@ -38,8 +42,8 @@ function VoucherSite() {
                             </div>
                         </div>
 
-                        <button className="help-button" style={{ textAlign: 'center' }}>
-                            <FontAwesomeIcon icon={faPlaneDeparture} size="lg" style={{ marginRight: "10px", verticalAlign: "middle" }} />
+                        <button className="help-button" style={{ textAlign: 'center', backgroundColor: '#007BFF', color: '#FFFFFF' }}>
+                            <FontAwesomeIcon icon={faArrowCircleRight} size="lg" style={{ marginRight: "10px", verticalAlign: "middle" }} />
                             <p style={{ display: 'inline-block', verticalAlign: 'middle', margin: 0 }}>Zrealizuj</p>
                         </button>
                     </form>

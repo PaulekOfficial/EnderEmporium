@@ -1,10 +1,11 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars, faCircleQuestion, faCogs, faSignIn} from "@fortawesome/free-solid-svg-icons";
-import {Link, useNavigate} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import $ from 'jquery';
 import {useEffect, useRef, useState} from "react";
 
 const NavBar = () => {
+    const location = useLocation();
     const navigate = useNavigate();
 
     const [stickNav, setStickNav] = useState(false);
@@ -14,6 +15,22 @@ const NavBar = () => {
     const sliderRef = useRef(null);
     const indexValueRef = useRef(indexValue);
 
+    let pathToLink = {
+        "/": 0,
+        "/news": 1,
+        "/voucher": 2,
+        "/rules": 3,
+    };
+
+    useEffect(() => {
+        if (location.pathname === "/help") {
+            return;
+        }
+
+        setIndexValue(pathToLink[location.pathname]);
+        indexValueRef.current = pathToLink[location.pathname];
+        setLeftPosition(getLeftPosition(pathToLink[location.pathname]));
+    }, []);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)

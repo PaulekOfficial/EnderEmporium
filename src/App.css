@@ -741,6 +741,11 @@ body {
   color: #4285f4;
 }
 
+.input-error {
+  border-radius: 4px;
+  border: red solid 2px;
+}
+
 .overlay-form button {
   text-align: center;
   font-weight: bold;
@@ -807,6 +812,47 @@ body {
 }
 
 /*##################################################################################*/
+/*#                                      NEWS                                      #*/
+/*##################################################################################*/
+
+.news-element {
+  width: 100%;
+  height: fit-content;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 20px;
+
+  -webkit-box-shadow: 1px 1px 24px 1px rgba(220, 220, 220, 1);
+  -moz-box-shadow: 1px 1px 24px 1px rgba(220, 220, 220, 1);
+  box-shadow: 1px 1px 24px 1px rgba(220, 220, 220, 1);
+}
+
+.news-element-header {
+  width: 100%;
+  display: flex;
+}
+
+.news-element-header img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.news-element-text {
+  width: calc(100% - 40px);
+  padding: 0 20px;
+  text-align: left;
+  text-autospace: ideograph-alpha;
+  text-wrap: normal;
+}
+
+.news-element-header-title {
+  text-align: left;
+  width: 100%;
+  margin-left: 60px;
+}
+
+/*##################################################################################*/
 /*#                                    COOKIE                                      #*/
 /*##################################################################################*/
 
@@ -825,6 +871,40 @@ body {
   -webkit-box-shadow: 1px 1px 24px 1px rgba(220, 220, 220, 1);
   -moz-box-shadow: 1px 1px 24px 1px rgba(220, 220, 220, 1);
   box-shadow: 1px 1px 24px 1px rgba(220, 220, 220, 1);
+}
+
+/*##################################################################################*/
+/*#                                Loading Screen                                  #*/
+/*##################################################################################*/
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-animation {
+  font-size: 2em;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% { color: #000; }
+  50% { color: transparent; }
+  100% { color: #000; }
+}
+
+.fadeLoading {
+  transition: opacity 5s;
+  opacity: 0;
 }
 
 /*##################################################################################*/
@@ -909,6 +989,24 @@ body {
 
   .overlay-form {
     height: auto;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .news-element-header {
+    width: 100%;
+    display: block;
+  }
+
+  .news-element-header h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 90%;
+  }
+
+  .news-element-header-title {
+    text-align: center;
+    margin-left: 0;
   }
 }
 

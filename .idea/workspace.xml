@@ -5,22 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc643e8b-4f8c-4cda-89a4-8ca1a4276166" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/images/3580617sz0ygexqpz.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/AJAX-plyn-uniwersalny-BOOST-ZESTAW-MIX-3x-1L.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Voucher-PNG-Images.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/law-book.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sites/LoginLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sites/news/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sites/rules/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_11_2023_10_01_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_11_2023_10_01__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/lastBuyers/news.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/loading/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/newsElement/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/loading-site.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/nav/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/nav/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sites/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sites/LoginLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/LoginLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sites/help/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/help/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sites/news/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/news/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sites/voutcher/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/voutcher/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +26,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="com.haulmont.rcb.palette" />
         <option value="com.haulmont.rcb.previews" />
         <option value="com.haulmont.rcb.index" />
         <option value="com.haulmont.rcb.useInitial" />
         <option value="com.haulmont.rcb.README" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -81,34 +76,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pawel/WebstormProjects/enderemporium/src/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/Webstorm/EnderEmporium/src/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
         <entry key="com.haulmont.rcb.reactComponents" value="false" />
         <entry key="com.haulmont.rcb.reactInspector" value="false" />
         <entry key="com.haulmont.rcb.storybook" value="false" />
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
       </map>
     </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Webstorm\EnderEmporium\src\images" />
       <recent name="C:\Users\pawel\WebstormProjects\enderemporium\src\images" />
       <recent name="C:\Users\pawel\WebstormProjects\enderemporium\src\sites\help" />
     </key>
@@ -154,6 +155,10 @@
       <workItem from="1701431560549" duration="1776000" />
       <workItem from="1701678386354" duration="2127000" />
       <workItem from="1701697628552" duration="101000" />
+      <workItem from="1701884145787" duration="394000" />
+      <workItem from="1701899178953" duration="1189000" />
+      <workItem from="1701943474227" duration="5633000" />
+      <workItem from="1701957665865" duration="6887000" />
     </task>
     <servers />
   </component>
