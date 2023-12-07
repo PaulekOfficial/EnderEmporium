@@ -1,22 +1,6 @@
 import '../App.css';
-import NavBar from "../elements/nav";
-import Header from "../elements/header";
-import {Outlet} from "react-router-dom";
-import cookieIcon from "../images/3580617sz0ygexqpz.gif";
-import {
-    faArrowRight,
-    faBasketShopping,
-    faCross,
-    faCrosshairs, faKey,
-    faMailBulk, faPerson,
-    faPlaneDeparture, faUniversalAccess,
-    faUser,
-    faXmark
-} from "@fortawesome/free-solid-svg-icons";
+import {faArrowRight, faKey, faPerson} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import ServerStatus from "../elements/serverStatus";
-import serverIcon from "../images/server-icon.png";
-import LastBuyers from "../elements/lastBuyers";
 
 function LoginLayout() {
     return (
@@ -67,7 +51,12 @@ function LoginLayout() {
                                     <p style={{textAlign: "right", paddingRight: "10px"}}>Zapomniałeś hasła?</p>
                                 </div>
 
-                                <button className="help-button" style={{textAlign: 'center', width: "100%", backgroundColor: "#FFA500", color: "#000000"}}>
+                                <button className="help-button" style={{
+                                    textAlign: 'center',
+                                    width: "100%",
+                                    backgroundColor: "#FFA500",
+                                    color: "#000000"
+                                }}>
                                     <FontAwesomeIcon icon={faArrowRight} size="lg"
                                                      style={{marginRight: "10px", verticalAlign: "middle"}}/>
                                     <p style={{display: 'inline-block', verticalAlign: 'middle', margin: 0}}>Zaloguj</p>

@@ -1,5 +1,5 @@
 import successGif from "../../images/call_center.gif";
-import {faMailBulk, faMessage, faPlaneDeparture, faSignIn, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faMailBulk, faMessage, faPlaneDeparture, faUser} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useEffect, useState} from "react";
 import $ from "jquery";
@@ -53,23 +53,29 @@ function HelpSite() {
                     <h1 style={{width: "100%", marginTop: "5px", marginBottom: "5px"}}>
                         Potrzebujesz pomocy? Już pomagamy
                     </h1>
-                    <p style={{ width: "100%" }}>
-                        Używając tego formulaża - wyślij wiadomość do administratora tego sklepu, twój problem zostanie rozpatrzony w ciągu 48h.
+                    <p style={{width: "100%"}}>
+                        Używając tego formulaża - wyślij wiadomość do administratora tego sklepu, twój problem zostanie
+                        rozpatrzony w ciągu 48h.
                     </p>
                     <form style={{width: "80%"}}>
                         <p className={"help-form-error"} style={{color: "red", padding: "15px"}}></p>
-                        <div className={"overlay-inputs"} style={{display: "flex", flexFlow: "none", justifyContent: "center"}}>
-                            <div className={`input-container ${!validEmail ? 'input-error' : ''}`} style={{float: "left", maxWidth: "100%"}}>
-                                <input type="text" className="input-field" required onChange={e => setEmail(e.target.value)}/>
+                        <div className={"overlay-inputs"}
+                             style={{display: "flex", flexFlow: "none", justifyContent: "center"}}>
+                            <div className={`input-container ${!validEmail ? 'input-error' : ''}`}
+                                 style={{float: "left", maxWidth: "100%"}}>
+                                <input type="text" className="input-field" required
+                                       onChange={e => setEmail(e.target.value)}/>
                                 <label htmlFor="input" className="label">
-                                    <FontAwesomeIcon icon={faMailBulk} size={"lg"} style={{marginRight: "10px"}} />
+                                    <FontAwesomeIcon icon={faMailBulk} size={"lg"} style={{marginRight: "10px"}}/>
                                     Podaj swój adres e-mail
                                 </label>
                             </div>
-                            <div className={`input-container ${!validateName ? 'input-error' : ''}`} style={{float: "left", maxWidth: "100%"}}>
-                                <input type="text" className="input-field" required onChange={e => setName(e.target.value)}/>
+                            <div className={`input-container ${!validName ? 'input-error' : ''}`}
+                                 style={{float: "left", maxWidth: "100%"}}>
+                                <input type="text" className="input-field" required
+                                       onChange={e => setName(e.target.value)}/>
                                 <label htmlFor="input" className="label">
-                                    <FontAwesomeIcon icon={faUser} size={"lg"} style={{marginRight: "10px"}} />
+                                    <FontAwesomeIcon icon={faUser} size={"lg"} style={{marginRight: "10px"}}/>
                                     Twój pseudonim
                                 </label>
                             </div>
@@ -79,17 +85,21 @@ function HelpSite() {
 
                         <div className={"overlay-inputs"} style={{width: "100%"}}>
                             <div className="input-container" style={{width: "100%"}}>
-                                <textarea className="input-field" style={{width: "100%", height: "150px"}} required />
+                                <textarea className="input-field" style={{width: "100%", height: "150px"}} required/>
                                 <label htmlFor="input" className="label">
-                                    <FontAwesomeIcon icon={faMessage} size={"lg"} style={{marginRight: "10px"}} />
+                                    <FontAwesomeIcon icon={faMessage} size={"lg"} style={{marginRight: "10px"}}/>
                                     Wiadomość
                                 </label>
                             </div>
                         </div>
 
-                        <button className="help-button" style={{ textAlign: 'center', backgroundColor: '#007BFF', color: '#FFFFFF' }} onClick={e => handleSubmit(e)}>
-                            <FontAwesomeIcon icon={faPlaneDeparture} size="lg" style={{ marginRight: "10px", verticalAlign: "middle" }} />
-                            <p style={{ display: 'inline-block', verticalAlign: 'middle', margin: 0 }}>Wyślij Wiadomość</p>
+                        <button className="help-button"
+                                style={{textAlign: 'center', backgroundColor: '#007BFF', color: '#FFFFFF'}}
+                                onClick={e => handleSubmit(e)}>
+                            <FontAwesomeIcon icon={faPlaneDeparture} size="lg"
+                                             style={{marginRight: "10px", verticalAlign: "middle"}}/>
+                            <p style={{display: 'inline-block', verticalAlign: 'middle', margin: 0}}>Wyślij
+                                Wiadomość</p>
                         </button>
                     </form>
                 </div>

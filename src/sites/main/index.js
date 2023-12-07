@@ -25,15 +25,17 @@ function MainSite() {
         <>
             <div className={`items`}>
                 <div className="elements">
-                    <ItemOffer id={0} name={"Ranga VIP"} price={"6.99"} discountPrice={"4.90"} hasDiscount={true} isHighlighted={true} onButtonClick={handleItemButtonClick} />
-                    <ItemOffer id={1} name={"Ranga VIP ++"} price={"9.99"} onButtonClick={handleItemButtonClick} />
-                    <ItemOffer id={2} name={"Turbodrop - 30m"} price={"4.99"} image={turbodropIcon} onButtonClick={handleItemButtonClick} />
+                    <ItemOffer id={0} name={"Ranga VIP"} price={"6.99"} discountPrice={"4.90"} hasDiscount={true}
+                               isHighlighted={true} onButtonClick={handleItemButtonClick}/>
+                    <ItemOffer id={1} name={"Ranga VIP ++"} price={"9.99"} onButtonClick={handleItemButtonClick}/>
+                    <ItemOffer id={2} name={"Turbodrop - 30m"} price={"4.99"} image={turbodropIcon}
+                               onButtonClick={handleItemButtonClick}/>
                 </div>
-                <Pageable />
+                <Pageable pageSize={1}/>
             </div>
             <div className={`sidebar`}>
                 <ServerStatus icon={serverIcon} ipAddress={"mc.paulek.pro"} onlinePlayers={10}/>
-                <LastBuyers />
+                <LastBuyers/>
             </div>
 
             {showOverlay && (

@@ -2,7 +2,17 @@ import funnyImage from "../../images/FDiQFixXsAk37nZ.jpg";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBasketShopping} from "@fortawesome/free-solid-svg-icons";
 
-const ItemOffer = ({name, id, image = funnyImage, price, discountPrice = "0.00", currency = "PLN", hasDiscount = false, isHighlighted = false, onButtonClick }) => {
+const ItemOffer = ({
+                       name,
+                       id,
+                       image = funnyImage,
+                       price,
+                       discountPrice = "0.00",
+                       currency = "PLN",
+                       hasDiscount = false,
+                       isHighlighted = false,
+                       onButtonClick
+                   }) => {
     const handleButtonClick = () => {
         onButtonClick(id);
     };
@@ -14,15 +24,15 @@ const ItemOffer = ({name, id, image = funnyImage, price, discountPrice = "0.00",
             <div className="item-spacer"></div>
             <div className="item-price">
                 {
-                   hasDiscount ? (
-                       <>
-                           <p>{discountPrice} {currency}</p>
-                           <s>{price} {currency}</s>
-                       </>
-                   ) : (
-                       <>
-                           <p>{price} {currency}</p>
-                       </>
+                    hasDiscount ? (
+                        <>
+                            <p>{discountPrice} {currency}</p>
+                            <s>{price} {currency}</s>
+                        </>
+                    ) : (
+                        <>
+                            <p>{price} {currency}</p>
+                        </>
                     )
                 }
             </div>

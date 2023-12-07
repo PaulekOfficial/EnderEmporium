@@ -1,6 +1,6 @@
 import lawIcon from "../../images/AJAX-plyn-uniwersalny-BOOST-ZESTAW-MIX-3x-1L.jpg";
 
-function NewsElement({ image = lawIcon, title = "Generic title", tags = ["TEST"], description = "Generic description" }) {
+function NewsElement({image = lawIcon, title = "Generic title", tags = ["TEST"], description = "Generic description"}) {
     const newsTags = tags.map((tag, index) => {
         return (
             <>

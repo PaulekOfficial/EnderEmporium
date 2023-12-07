@@ -1,9 +1,9 @@
 // AnimatedRoute.js
 
-import React, { useEffect, useState } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {Outlet, useNavigate} from 'react-router-dom';
 
-const AnimatedRoute = ({ path, element: Element }) => {
+const AnimatedRoute = ({path, element: Element}) => {
     const navigate = useNavigate();
     const [animate, setAnimate] = useState(false);
 
@@ -20,7 +20,7 @@ const AnimatedRoute = ({ path, element: Element }) => {
 };
 
 const AnimatedRoutes = () => {
-    return <Outlet />;
+    return <Outlet/>;
 };
 
-export { AnimatedRoute, AnimatedRoutes };
+export {AnimatedRoute, AnimatedRoutes};

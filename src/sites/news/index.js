@@ -33,11 +33,12 @@ function NewsSite() {
                 <div className="elements" style={{padding: "20px"}}>
                     {newsData.length === 0 ? (
                         <>
-                            <img src={lawIcon} alt={""} style={{maxWidth: "294px", maxHeight: "220px", padding: "20px"}}/>
+                            <img src={lawIcon} alt={""}
+                                 style={{maxWidth: "294px", maxHeight: "220px", padding: "20px"}}/>
                             <h1 style={{width: "100%", marginTop: "5px", marginBottom: "5px"}}>
                                 AJAX
                             </h1>
-                            <p style={{ width: "100%" }}>
+                            <p style={{width: "100%"}}>
                                 Przykładowe skrypty ajax
                             </p>
                         </>

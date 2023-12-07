@@ -3,13 +3,19 @@
     {
       "id": 1,
       "title": "Sample News 1",
-      "tags": ["tag1", "tag2"],
+      "tags": [
+        "tag1",
+        "tag2"
+      ],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
       "id": 2,
       "title": "Sample News 2",
-      "tags": ["tag3", "tag4"],
+      "tags": [
+        "tag3",
+        "tag4"
+      ],
       "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
     }
   ]

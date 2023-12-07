@@ -1,6 +1,6 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars, faCircleQuestion, faCogs, faSignIn} from "@fortawesome/free-solid-svg-icons";
-import {Link, useLocation, useNavigate} from "react-router-dom";
+import {faBars, faCircleQuestion, faSignIn} from "@fortawesome/free-solid-svg-icons";
+import {useLocation, useNavigate} from "react-router-dom";
 import $ from 'jquery';
 import {useEffect, useRef, useState} from "react";
 
@@ -38,9 +38,9 @@ const NavBar = () => {
 
     const handleScroll = () => {
         const nav = $('.nav');
-        const offset= window.scrollY;
+        const offset = window.scrollY;
         const windowWidth = $(window).width();
-        if((offset > 120) && (windowWidth < 1150)) {
+        if ((offset > 120) && (windowWidth < 1150)) {
             stickStickyNav();
             setStickNav(true);
         } else {
@@ -57,8 +57,8 @@ const NavBar = () => {
             });
 
             nav.addClass('stickyNav');
-            nav.css({ opacity: 0, top: '-50px' });
-            nav.animate({ opacity: 1, top: '0' }, 500);
+            nav.css({opacity: 0, top: '-50px'});
+            nav.animate({opacity: 1, top: '0'}, 500);
         }
     }
 
@@ -139,7 +139,7 @@ const NavBar = () => {
 
     const handleMobileBarsClick = () => {
         const navElements = $('.nav-elements');
-        if(!navElements.hasClass('mobile-elements')) {
+        if (!navElements.hasClass('mobile-elements')) {
             return;
         }
 
@@ -224,30 +224,38 @@ const NavBar = () => {
         <>
             <nav className="nav">
                 <div className="mobile-bars">
-                    <FontAwesomeIcon icon={faBars} size={"lg"} />
+                    <FontAwesomeIcon icon={faBars} size={"lg"}/>
                 </div>
                 <ul className="nav-elements">
                     <span className={"slider"} ref={sliderRef}></span>
-                    <li key={"main-site"} className={"slider-item"} onClick={() => {handleMobileBarsClick()}}>
+                    <li key={"main-site"} className={"slider-item"} onClick={() => {
+                        handleMobileBarsClick()
+                    }}>
                         Strona Główna
                     </li>
-                    <li key={"news-site"} className={"slider-item"} onClick={() => {handleMobileBarsClick()}}>
+                    <li key={"news-site"} className={"slider-item"} onClick={() => {
+                        handleMobileBarsClick()
+                    }}>
                         Wiadomości
                     </li>
-                    <li key={"voucher-site"} className={"slider-item"} onClick={() => {handleMobileBarsClick()}}>
+                    <li key={"voucher-site"} className={"slider-item"} onClick={() => {
+                        handleMobileBarsClick()
+                    }}>
                         Zrealizuj Voucher
                     </li>
-                    <li key={"rules-site"} className={"slider-item"} onClick={() => {handleMobileBarsClick()}}>
+                    <li key={"rules-site"} className={"slider-item"} onClick={() => {
+                        handleMobileBarsClick()
+                    }}>
                         Regulamin
                     </li>
                 </ul>
 
                 <div className="nav-icons">
                     <div className="nav-icon-item" onClick={() => navigate("/login")} style={{cursor: "pointer"}}>
-                        <FontAwesomeIcon icon={faSignIn} size={"lg"} />
+                        <FontAwesomeIcon icon={faSignIn} size={"lg"}/>
                     </div>
                     <div className="nav-icon-item" onClick={() => navigate("/help")} style={{cursor: "pointer"}}>
-                        <FontAwesomeIcon icon={faCircleQuestion} size={"lg"} />
+                        <FontAwesomeIcon icon={faCircleQuestion} size={"lg"}/>
                     </div>
                 </div>
                 <div style={{clear: "both"}}></div>

@@ -1,7 +1,7 @@
 import successGif from "../../images/payment-success.gif";
 import pendingGif from "../../images/payment-process.gif";
 import failedGif from "../../images/payment-failed.gif";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import $ from "jquery";
 
 function OrderStatusSite() {
@@ -29,7 +29,7 @@ function OrderStatusSite() {
                                 ? "W trakcie realizacji"
                                 : "Coś poszło nie tak podczas przetwarzania płatności"}
                     </h1>
-                    <p style={{ width: "100%" }}>
+                    <p style={{width: "100%"}}>
                         {status === "SUCCESS"
                             ? "Z radością informujemy, że Twoje Zamówienie zostało Przekazane do Realizacji w naszym Systemie. Dziękujemy za zaufanie"
                             : status === "PENDING"

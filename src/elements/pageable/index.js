@@ -1,8 +1,6 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faArrowLeft, faArrowRight, faBasketShopping} from "@fortawesome/free-solid-svg-icons";
-import avatar from "../../images/skinmc-avatar.png";
+import {faArrowLeft, faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import {Link, useNavigate} from "react-router-dom";
-import {useEffect} from "react";
 
 const PageableElement = ({pageSize = 1, currentPage = 1}) => {
     const navigate = useNavigate();
@@ -10,11 +8,12 @@ const PageableElement = ({pageSize = 1, currentPage = 1}) => {
 
     function navigateToPage(index) {
         navigate("/page/" + index);
-    };
+    }
 
     for (let i = 1; i < pageSize + 1; i++) {
         pages.push(
-            <div key={"page" + i} className={`page-number ${currentPage === i ? 'active-page' : ''}`} onClick={() => navigateToPage(i)}>
+            <div key={"page" + i} className={`page-number ${currentPage === i ? 'active-page' : ''}`}
+                 onClick={() => navigateToPage(i)}>
                 <p>{i}</p>
             </div>
         );

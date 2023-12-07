@@ -1,8 +1,6 @@
 import lawIcon from "../../images/law-book.png";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import $ from "jquery";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCode, faMailBulk, faMessage, faPerson, faPlaneDeparture, faUser} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 
 function RulesSite() {
@@ -18,7 +16,7 @@ function RulesSite() {
                     <h1 style={{width: "100%", marginTop: "5px", marginBottom: "5px"}}>
                         Regulamin
                     </h1>
-                    <p style={{ width: "100%" }}>
+                    <p style={{width: "100%"}}>
                         Regulamin korzystania z tej witryny o tematatyce sklepowej
                     </p>
                     <span style={{padding: "20px"}}>
@@ -72,6 +70,33 @@ function RulesSite() {
                             <Link to={"https://uodo.gov.pl/pl/131/224"}>
                                 <h3>Arytkuł RODO ( Rozporządzenie o ochronie danych osobowych )</h3>
                             </Link>
+
+                            <table className="rules-table">
+                                <thead>
+                                <tr>
+                                    <th>Rodzaj Naruszenia</th>
+                                    <th>Kara Pieniężna</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Nieakceptowanie regulaminu</td>
+                                        <td>50 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Złożenie zamówienia bez akceptacji warunków sprzedaży</td>
+                                        <td>100 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nadużycie płatności</td>
+                                        <td>150 zł</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bycie kapusiem</td>
+                                        <td>1500 zł</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                     </span>
                 </div>
             </div>

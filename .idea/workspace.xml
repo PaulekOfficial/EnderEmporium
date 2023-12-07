@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc643e8b-4f8c-4cda-89a4-8ca1a4276166" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/elements/lastBuyers/news.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/elements/loading/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/elements/newsElement/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/loading-site.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/nav/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/nav/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sites/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sites/LoginLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/LoginLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/pageable/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/pageable/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sites/help/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/help/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sites/news/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/news/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sites/voutcher/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/voutcher/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sites/main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/main/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sites/rules/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/rules/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +86,7 @@
     "nodejs_package_manager_path": "npm",
     "npm.start.executor": "Run",
     "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\pawel\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -158,7 +153,7 @@
       <workItem from="1701884145787" duration="394000" />
       <workItem from="1701899178953" duration="1189000" />
       <workItem from="1701943474227" duration="5633000" />
-      <workItem from="1701957665865" duration="6887000" />
+      <workItem from="1701957665865" duration="10413000" />
     </task>
     <servers />
   </component>

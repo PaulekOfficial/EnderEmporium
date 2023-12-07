@@ -6,7 +6,7 @@ const ServerStatus = ({icon, ipAddress = "server address ipv4", onlinePlayers = 
     return (
         <div className="sidebar-item">
             <div className="server-image" onClick={() => funnyEasterEgg()}>
-                <img src={icon}  alt="Server Icon"/>
+                <img src={icon} alt="Server Icon"/>
             </div>
             <div className="server-description">
                 <p>{ipAddress}</p>

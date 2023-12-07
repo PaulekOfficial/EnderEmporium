@@ -6,7 +6,7 @@ const LastBuyers = () => {
     for (let i = 0; i < 24; i++) {
         lastBuyers.push(
             <div className="last-buy-item" key={i}>
-                <img src={avatar} alt={""} />
+                <img src={avatar} alt={""}/>
             </div>
         );
     }

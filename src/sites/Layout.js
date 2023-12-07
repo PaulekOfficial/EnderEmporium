@@ -2,10 +2,9 @@ import '../App.css';
 import NavBar from "../elements/nav";
 import Header from "../elements/header";
 import {Outlet} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import LoadingScreen from "../elements/loading";
 import $ from "jquery";
-import {fas} from "@fortawesome/free-solid-svg-icons";
 
 function Layout() {
     useEffect(() => {
@@ -20,11 +19,11 @@ function Layout() {
     return (
         <div className="App">
             <LoadingScreen/>
-            <Header />
+            <Header/>
             <div className="container">
-                <NavBar />
+                <NavBar/>
                 <div className="main">
-                    <Outlet />
+                    <Outlet/>
                 </div>
             </div>
             {/*<div className={"cookie-container"}>*/}
