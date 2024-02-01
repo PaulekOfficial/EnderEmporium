@@ -1,6 +1,7 @@
 import '../App.css';
 import {faArrowRight, faKey, faPerson} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {Link} from "react-router-dom";
 
 function LoginLayout() {
     return (
@@ -17,7 +18,11 @@ function LoginLayout() {
                     }}>
                         <div style={{width: "95%", display: "flex", justifyContent: "space-between"}}>
                             <h2 style={{textAlign: "left"}}>Logowanie</h2>
-                            <p style={{textAlign: "right", padding: "10px", color: "darkblue"}}>Nie masz konta?</p>
+                            <Link to={"/register"}>
+                                <p style={{textAlign: "right", padding: "10px", color: "darkblue"}}>
+                                    Nie masz konta?
+                                </p>
+                            </Link>
                         </div>
 
                         <form style={{width: "95%"}}>
@@ -48,7 +53,9 @@ function LoginLayout() {
                                             Nie wylogowuj mnie
                                         </label>
                                     </div>
-                                    <p style={{textAlign: "right", paddingRight: "10px"}}>Zapomniałeś hasła?</p>
+                                    <Link to={"/forgot-password"}>
+                                        <p style={{textAlign: "right", paddingRight: "10px"}}>Zapomniałeś hasła?</p>
+                                    </Link>
                                 </div>
 
                                 <button className="help-button" style={{

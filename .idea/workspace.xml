@@ -5,10 +5,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc643e8b-4f8c-4cda-89a4-8ca1a4276166" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/elements/MainHeader/Notifications.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/MainHeader/SelectLanguage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/MainHeader/UserMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/PasswordStrengthMeter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/ShoppingCartOverlay.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/ChartCurrentSubject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/ChartSiteVisits.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/ConversionRate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/CurrentVisits.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/DashCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/DashCardBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/DashCardHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/InfoCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/InfoCards.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/NewsUpdate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/NewsUpdateItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/OrderTimeline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/OrderTimelineItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/SocialTraffic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/SocialTrafficItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/Tasks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/TasksItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/products/ProductHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/products/ProductMore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/products/ProductTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/products/ProductTableHead.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/products/TableToolbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/products/productApi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/user/TableToolbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/user/UserHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/user/UserMore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/user/UserTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/user/UserTableHead.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/dashboard/user/userApi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/elements/drawer/CustomListItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/avatar_default.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/ic_flag_de.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/ic_flag_en.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/ic_flag_fr.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/illustration_avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/news/cover_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/news/cover_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/news/cover_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/news/cover_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/news/cover_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/DashboardLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/MainHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layout/SideDrawer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/PriceService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/ProductService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sites/ForgotPasswordLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sites/RegisterLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sites/dashboard/Dashboard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sites/dashboard/Users.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sites/dashboard/product/ProductCreator.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sites/dashboard/product/ProductEditor.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sites/dashboard/product/Products.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/nav/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/nav/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sites/news/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/news/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/palette.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/previews.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/useInitial.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/loading/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/loading/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sites/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sites/LoginLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/LoginLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sites/main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sites/main/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +96,10 @@
         <option value="com.haulmont.rcb.useInitial" />
         <option value="com.haulmont.rcb.README" />
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+        <option value="JSX File" />
       </list>
     </option>
   </component>
@@ -76,7 +152,8 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Webstorm/EnderEmporium/src/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Webstorm/EnderEmporium/src/sites/dashboard&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -84,7 +161,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.start.executor&quot;: &quot;Run&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\pawel\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\Webstorm\\EnderEmporium\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -102,12 +179,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Webstorm\EnderEmporium\src\sites\dashboard" />
+      <recent name="E:\Webstorm\EnderEmporium\src\elements\dashboard\products" />
+      <recent name="E:\Webstorm\EnderEmporium\src\elements" />
       <recent name="E:\Webstorm\EnderEmporium\src\images" />
       <recent name="C:\Users\pawel\WebstormProjects\enderemporium\src\images" />
-      <recent name="C:\Users\pawel\WebstormProjects\enderemporium\src\sites\help" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\pawel\WebstormProjects\enderemporium\src\images" />
+      <recent name="E:\Webstorm\EnderEmporium\src\sites\dashboard\product" />
+      <recent name="E:\Webstorm\EnderEmporium\src\elements\dashboard" />
+      <recent name="E:\Webstorm\EnderEmporium\src\layout" />
+      <recent name="E:\Webstorm\EnderEmporium\src\elements\user" />
+      <recent name="E:\Webstorm\EnderEmporium\src\sites\dashboard" />
     </key>
   </component>
   <component name="RunManager">
@@ -153,7 +236,22 @@
       <workItem from="1701943474227" duration="5633000" />
       <workItem from="1701957665865" duration="11448000" />
       <workItem from="1701977738070" duration="634000" />
-      <workItem from="1701985605066" duration="1445000" />
+      <workItem from="1701985605066" duration="1653000" />
+      <workItem from="1702292885376" duration="600000" />
+      <workItem from="1704826800353" duration="43000" />
+      <workItem from="1705526439585" duration="1274000" />
+      <workItem from="1705756086183" duration="2921000" />
+      <workItem from="1705759480258" duration="2453000" />
+      <workItem from="1706289306185" duration="26000" />
+      <workItem from="1706627602154" duration="7082000" />
+      <workItem from="1706638503873" duration="6214000" />
+      <workItem from="1706644914710" duration="995000" />
+      <workItem from="1706649455916" duration="588000" />
+      <workItem from="1706650325357" duration="3847000" />
+      <workItem from="1706703589309" duration="1347000" />
+      <workItem from="1706723708728" duration="3043000" />
+      <workItem from="1706731539477" duration="7283000" />
+      <workItem from="1706772880418" duration="4679000" />
     </task>
     <servers />
   </component>

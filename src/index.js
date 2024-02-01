@@ -1,19 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {DevSupport} from "@react-buddy/ide-toolbox";
-import {ComponentPreviews, useInitial} from "./dev";
+import {ThemeProvider} from "@mui/material/styles";
+import theme from "./theme";
+import {CssBaseline} from "@mui/material";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <DevSupport ComponentPreviews={ComponentPreviews}
-                    useInitialHook={useInitial}
-        >
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
             <App/>
-        </DevSupport>
+        </ThemeProvider>
     </React.StrictMode>
 );
 

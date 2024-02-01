@@ -1,6 +1,5 @@
 import React from 'react';
 import loadingGif from '../../images/loading-site.gif';
-import '../../App.css';
 
 function LoadingScreen() {
     return (
