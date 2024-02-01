@@ -10,24 +10,20 @@ import { visuallyHidden } from "@mui/utils";
 
 const headCells = [
   {
-    id: "name",
-    label: "Nazwa",
+    id: "id",
+    label: "ID",
   },
   {
-    id: "company",
-    label: "Firma",
+    id: "username",
+    label: "Pseudonim",
   },
   {
-    id: "role",
-    label: "Rola",
+    id: "email",
+    label: "E-mail",
   },
   {
-    id: "verified",
+    id: "enabled",
     label: "Zweryfikowany",
-  },
-  {
-    id: "status",
-    label: "Status",
   },
   {
     id: "menu",

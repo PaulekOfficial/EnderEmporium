@@ -3,10 +3,12 @@ import {faMailBulk, faMessage, faPlaneDeparture, faUser} from "@fortawesome/free
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useEffect, useState} from "react";
 import $ from "jquery";
+import TicketService from "../../service/TicketService.ts";
 
 function HelpSite() {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
+    const [message, setMessage] = useState('');
     const [validName, setValidName] = useState(true);
     const [validEmail, setValidEmail] = useState(true);
 
@@ -20,7 +22,7 @@ function HelpSite() {
         return re.test(String(name));
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         let formError = document.querySelector('.help-form-error');
         event.preventDefault();
         if (!validateEmail(email)) {
@@ -37,8 +39,19 @@ function HelpSite() {
         }
         setValidName(true);
 
+        const data = {
+            email: email,
+            name: name,
+            message: message
+        }
 
-        //TODO: Send message to admin
+        const response = await TicketService.createTicket(data);
+
+        if (response.success) {
+            alert("Twoja wiadomość została wysłana");
+        } else {
+            alert("Wystąpił błąd podczas wysyłania wiadomości");
+        }
     }
 
     useEffect(() => {
@@ -85,7 +98,8 @@ function HelpSite() {
 
                         <div className={"overlay-inputs"} style={{width: "100%"}}>
                             <div className="input-container" style={{width: "100%"}}>
-                                <textarea className="input-field" style={{width: "100%", height: "150px"}} required/>
+                                <textarea className="input-field" style={{width: "100%", height: "150px"}} required
+                                    onChange={e => setMessage(e.target.value)} />
                                 <label htmlFor="input" className="label">
                                     <FontAwesomeIcon icon={faMessage} size={"lg"} style={{marginRight: "10px"}}/>
                                     Wiadomość

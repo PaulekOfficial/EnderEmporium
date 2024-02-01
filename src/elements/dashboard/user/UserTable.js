@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { userData } from "./userApi";
+import {useEffect, useState} from "react";
 import {
   TableContainer,
   Table,
@@ -13,6 +12,7 @@ import { styled } from "@mui/styles";
 import TableToolbar from "./TableToolbar";
 import UserTableHead from "./UserTableHead";
 import UserMore from "./UserMore";
+import UserService from "../../../service/UserService.ts";
 
 // style
 const TableStyle = styled(Table)(({ theme }) => ({
@@ -83,10 +83,25 @@ const UserTable = () => {
   const [selectedItems, setSelectedItems] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [userData, setUserData] = useState([]);
 
   //console.log(selectedItems);
 
   //////     functions      ///////////////////////////////
+  const fetchUsers = async () => {
+    try {
+      const response = await UserService.getAllUsers();
+      const fetchedUsers = response.users || [];
+      setUserData(fetchedUsers);
+    } catch (error) {
+      console.error('Error fetching users:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchUsers();
+  }, []);
+
   // you click on the row, it takes the name as property, check the prop & sort
   const handleRequestSort = (e, property) => {
     const isAsc = orderBy === property && order === "asc";
@@ -201,16 +216,13 @@ const UserTable = () => {
                       scope="row"
                       padding="none"
                     >
-                      {user.name}
+                      {user.id}
                     </TableCell>
-                    <TableCell>{user.company}</TableCell>
-                    <TableCell>{user.role}</TableCell>
-                    <TableCell>{user.verified}</TableCell>
-                    <TableCell>
-                      <StatusText text={user.status} />
-                    </TableCell>
+                    <TableCell>{user.username}</TableCell>
+                    <TableCell>{user.email}</TableCell>
+                    <TableCell>{user.enabled === 1 ? "TAK" : "NIE"}</TableCell>
                     <TableCell align="right">
-                      <UserMore />
+                      <UserMore id={user.id} />
                     </TableCell>
                   </TableRow>
                 );

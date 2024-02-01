@@ -10,7 +10,7 @@ interface Price {
     updated_at: string;
 }
 
-interface Product {
+export interface Product {
     id: number;
     name: string;
     description: string;
@@ -21,17 +21,17 @@ interface Product {
     prices?: Price[];
 }
 
-interface ProductResponse {
+export interface ProductResponse {
     success: boolean;
     product: Product;
 }
 
-interface ProductsResponse {
+export interface ProductsResponse {
     success: boolean;
     products: Product[];
 }
 
-interface ErrorResponse {
+export interface ErrorResponse {
     success: false;
     message: string;
 }
@@ -59,9 +59,9 @@ export const ProductService = {
         }
     },
 
-    getProductById: async (id: number): Promise<ProductsResponse | ErrorResponse> => {
+    getProductById: async (id: number): Promise<ProductResponse | ErrorResponse> => {
         try {
-            const response = await axios.get<ProductsResponse | ErrorResponse>(`${BASE_URL}/product/${id}`);
+            const response = await axios.get<ProductResponse | ErrorResponse>(`${BASE_URL}/product/${id}`);
             return response.data;
         } catch (error) {
             console.error(`Error getting product with ID ${id}:`, error);

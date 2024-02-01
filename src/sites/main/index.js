@@ -10,6 +10,8 @@ import $ from "jquery";
 import ShoppingCartOverlay from "../../elements/ShoppingCartOverlay.tsx";
 import {ProductService} from "../../service/ProductService.ts";
 import {PriceService} from "../../service/PriceService.ts";
+import CartMiniButton from "../../elements/CartMiniButton.jsx";
+import NotificationContainer from "react-notifications/lib/NotificationContainer";
 
 function MainSite() {
     const [showOverlay, setShowOverlay] = useState(false);
@@ -49,6 +51,8 @@ function MainSite() {
 
     return (
         <>
+            <NotificationContainer />
+            <CartMiniButton />
             <div className={`items`}>
                 <div className="elements">
                     {products.map((product) => (

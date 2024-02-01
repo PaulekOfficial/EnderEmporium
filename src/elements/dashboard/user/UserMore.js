@@ -13,6 +13,7 @@ import { styled } from "@mui/styles";
 import { MoreVert } from "@mui/icons-material";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { MdModeEdit } from "react-icons/md";
+import UserService from "../../../service/UserService.ts";
 
 // style
 const MenuStyle = styled(Menu)(({ theme }) => ({
@@ -29,9 +30,48 @@ const MenuStyle = styled(Menu)(({ theme }) => ({
   },
 }));
 
-const UserMore = () => {
+const UserMore = ({id}) => {
   const ref = useRef(null);
   const [showMenu, setShowMenu] = useState(false);
+
+  const handleDelete = async (event) => {
+    event.preventDefault();
+    const res = await UserService.deleteUserById(id);
+
+    if (res.success) {
+      alert("Użytkownik został usunięty.");
+    } else {
+      alert("Wystąpił błąd podczas usuwania użytkownika.");
+    }
+
+    setShowMenu(false)
+  }
+
+  const handleEnable = async (event) => {
+    event.preventDefault();
+    const res = await UserService.activateUserById(id);
+
+    if (res.success) {
+      alert("Użytkownik został aktywowany.");
+    } else {
+      alert("Wystąpił błąd podczas aktywowania użytkownika.");
+    }
+
+    setShowMenu(false)
+  }
+
+  const handleDeactivate = async (event) => {
+    event.preventDefault();
+    const res = await UserService.deactivateUserById(id);
+
+    if (res.success) {
+      alert("Użytkownik został deaktywowany.");
+    } else {
+      alert("Wystąpił błąd podczas deaktywowania użytkownika.");
+    }
+
+    setShowMenu(false)
+  }
 
   return (
     <>
@@ -54,29 +94,36 @@ const UserMore = () => {
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
         transformOrigin={{ vertical: "top", horizontal: "right" }}
       >
-        <MenuItem onClick={() => setShowMenu(false)}>
+        <MenuItem onClick={handleDelete}>
           <ListItemIcon>
             <RiDeleteBin6Line />
           </ListItemIcon>
 
           <ListItemText
-            primary="Delete"
+            primary="USUŃ"
             primaryTypographyProps={{ variant: "body2" }}
           />
         </MenuItem>
 
-        <MenuItem
-          component={RouterLink}
-          to="#"
-          onClick={() => setShowMenu(false)}
-        >
+        <MenuItem onClick={handleEnable}>
           <ListItemIcon>
-            <MdModeEdit />
+            <RiDeleteBin6Line />
           </ListItemIcon>
 
           <ListItemText
-            primary="Edit"
-            primaryTypographyProps={{ variant: "body2" }}
+              primary="AKTYWUJ"
+              primaryTypographyProps={{ variant: "body2" }}
+          />
+        </MenuItem>
+
+        <MenuItem onClick={handleDeactivate}>
+          <ListItemIcon>
+            <RiDeleteBin6Line />
+          </ListItemIcon>
+
+          <ListItemText
+              primary="DEZAKTYWUJ"
+              primaryTypographyProps={{ variant: "body2" }}
           />
         </MenuItem>
       </MenuStyle>

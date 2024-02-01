@@ -16,6 +16,7 @@ import Users from "./sites/dashboard/Users";
 import Products from "./sites/dashboard/product/Products";
 import ProductCreator from "./sites/dashboard/product/ProductCreator";
 import ProductEditor from "./sites/dashboard/product/ProductEditor";
+import ShopCartSite from "./sites/shopcart/ShopCartSite.tsx";
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                         <Route path={"help"} element={<HelpSite/>}/>
                         <Route path={"rules"} element={<RulesSite/>}/>
                         <Route path={"news"} element={<NewsSite/>}/>
+                        <Route path={"shopcart"} element={<ShopCartSite/>}/>
                     </Route>
 
                     <Route path="/dashboard" element={<DashboardLayout />}>

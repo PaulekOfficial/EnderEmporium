@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-interface Price {
+export interface Price {
     id: number;
     product_id: number;
     netto: number;
@@ -10,12 +10,12 @@ interface Price {
     updated_at: string;
 }
 
-interface PricesResponse {
+export interface PricesResponse {
     success: boolean;
     prices: Price[];
 }
 
-interface PriceResponse {
+export interface PriceResponse {
     success: boolean;
     price: Price;
 }

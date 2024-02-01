@@ -1,6 +1,9 @@
 import funnyImage from "../../images/FDiQFixXsAk37nZ.jpg";
+import 'react-notifications/lib/notifications.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBasketShopping} from "@fortawesome/free-solid-svg-icons";
+import {NotificationManager} from "react-notifications";
+import ShopCartService from "../../service/ShopCartService.ts";
 
 const ItemOffer = ({
                        name,
@@ -14,7 +17,9 @@ const ItemOffer = ({
                        onButtonClick
                    }) => {
     const handleButtonClick = () => {
-        onButtonClick(id);
+        ShopCartService.incrementQuantity(id);
+        NotificationManager.info('Dodano produkt do koszyka');
+        // onButtonClick(id);
     };
 
     return (

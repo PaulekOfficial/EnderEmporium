@@ -20,6 +20,7 @@ const NavBar = () => {
         "/news": 1,
         "/voucher": 2,
         "/rules": 3,
+        "/shopcart": 0,
     };
 
     useEffect(() => {
